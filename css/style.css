@@ -1,0 +1,240 @@
+@charset "UTF-8";
+
+body {
+  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  background: #ccc;
+  width: 1180px;
+  margin: 0 auto;
+}
+
+/*-------------------------------------------
+header
+-------------------------------------------*/
+header {
+  background: #555;
+  display: flex;/* title-navと.btnを横並びに */
+  justify-content: space-between;/* title-navと.btnを両端ぞろえに */
+  align-items: center;/* title-navと.btnをY軸方向で中央ぞろえに */
+}
+
+.title-nav {
+  display: flex;/* h1,nav,.btnを横並びに */
+  align-items: center;/* h1,nav,.btnをY軸方向で中央ぞろえに */
+}
+
+header a {
+  color:#fff;
+}
+
+.title {
+  display: flex;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header .btn {
+  display: flex;
+}
+
+/*-------------------------------------------
+first-view
+-------------------------------------------*/
+
+.first-view {
+  background: #000;
+  background-image: url(../img/mainbg01.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;/* 画面幅に合わせる */
+  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+}
+
+.copy {
+  color: #fff;
+  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
+  writing-mode: vertical-rl;
+  /* 縦書き指定 */
+}
+
+/*-------------------------------------------
+#about
+-------------------------------------------*/
+#about {
+  background: rgb(224, 219, 219);
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;/* 画面幅に合わせる */
+  height: calc( 68100vw / 1920 );/* 背景画像の縦横比に合わせる */
+  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
+  writing-mode: vertical-rl;/* 縦書き指定 */
+  text-orientation: upright; /* すべて縦方向に表示 */
+}
+
+
+/*-------------------------------------------
+#feature
+-------------------------------------------*/
+
+#feature li {
+  display: flex;
+}
+
+#feature ul > li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+#feature img {
+  width: 55vw;
+  height: 28vw;
+  object-fit: cover;
+}
+
+#feature .feature-desc {
+  /* background: #ccc; */
+  width: 30vw;
+  align-content: center;
+}
+
+.feature-btn {
+  border: solid 1px #707070;
+}
+
+
+/*-------------------------------------------
+#plan
+-------------------------------------------*/
+#plan {
+  background: rgb(224, 219, 219);
+  background-image: url(../img/bg02.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;/* 画面幅に合わせる */
+}
+
+#plan h2 {
+  text-align: center;
+}
+
+.plan-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.plan-item {
+  width: 27%;
+}
+
+.plan-item img {
+  width: 100%;
+}
+
+
+/*-------------------------------------------
+#news
+-------------------------------------------*/
+#news h2, .news-nav {
+  text-align: center;
+}
+
+.news-nav ul {
+  background: #eee;
+  display: flex;
+  justify-content: center;
+}
+
+.news-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.news-item {
+  background: #eee;
+  width: 48%;
+  display:flex;
+}
+
+.news-item img {
+  width: 20%;
+}
+
+/*-------------------------------------------
+#access
+-------------------------------------------*/
+#access {
+  background: rgb(224, 219, 219);
+  background-image: url(../img/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;/* 画面幅に合わせる */
+}
+
+.access-wrapper {
+  display: flex;
+}
+
+.access-wrapper img {
+  width: 56%;
+}
+
+.map {
+  width: 67%;
+  margin: 0 auto;
+}
+
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+footer {
+  text-align: center;
+}
+
+nav {
+  background: orange;
+}
+
+footer ul {
+  background: pink;
+  margin: 0 auto;
+  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
+  writing-mode: vertical-rl;/* 縦書き指定 */
+}
+
+.copyright {
+  background: #000000;
+  color: #fff;
+}
+
+/*-------------------------------------------
+PC
+-------------------------------------------*/
+@media screen and (min-width: 600px) {
+  
+  /*-------------------------------------------
+  Mainvisual
+  -------------------------------------------*/
+  
+  /*-------------------------------------------
+  About
+  -------------------------------------------*/
+ 
+  /*-------------------------------------------
+  
+  -------------------------------------------*/
+  
+}
