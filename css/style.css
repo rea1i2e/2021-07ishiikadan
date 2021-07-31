@@ -23,9 +23,18 @@ header
 -------------------------------------------*/
 header {
   background: #555;
-  display: flex;/* title-navと.btnを横並びに */
-  justify-content: space-between;/* title-navと.btnを両端ぞろえに */
-  align-items: center;/* title-navと.btnをY軸方向で中央ぞろえに */
+  width: 100%;  
+  /* headerを手前に表示 */
+  z-index:11;
+  position: absolute;
+
+  /* title-navと.btnをY軸方向で中央ぞろえに */
+  align-items: center; 
+  /* title-navと.btnを横並びに */
+  display: flex;
+  
+  /* .title-navと.btnを両端ぞろえに */
+  justify-content: space-between;
 }
 
 .title-nav {
@@ -54,19 +63,81 @@ first-view
 -------------------------------------------*/
 
 .first-view {
-  background: #000;
-  background-image: url(../img/mainbg01.jpg);
+  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
+  position: relative;
+}
+
+.main_img {
+  z-index:10;
+  opacity: 0;
+  width: 100%;
+  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;/* 画面幅に合わせる */
-  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: anime 18s 0s infinite;
+  animation: anime 18s 0s infinite;
 }
+
+  .main_img:nth-of-type(2) {
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s; }
+
+  .main_img:nth-of-type(3) {
+    -webkit-animation-delay: 12s;
+    animation-delay: 12s; }
+
+
+@keyframes anime {
+  0% {
+      opacity: 0;
+  }
+  16% {
+      opacity: 1;
+  }
+  34% {
+      opacity: 1;
+  }
+50% {
+      opacity: 0;
+      transform: scale(1.2);
+      z-index:9;
+  }
+  100% { opacity: 0 }
+}
+
+@-webkit-keyframes anime {
+  0% {
+      opacity: 0;
+  }
+  16% {
+      opacity: 1;
+  }
+  34% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+      -webkit-transform: scale(1.2);
+      z-index:9;
+  }
+  100% { opacity: 0 }
+}
+
 
 .copy {
   color: #fff;
   -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
-  writing-mode: vertical-rl;
-  /* 縦書き指定 */
+  writing-mode: vertical-rl;/* 縦書き指定 */
+  position: absolute;
+  z-index:12;
+  top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 }
 
 /*-------------------------------------------
