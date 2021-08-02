@@ -21,8 +21,8 @@ a {
 /*-------------------------------------------
 header
 -------------------------------------------*/
-header {
-  background: #555;
+.header-wrapper {
+  /* background: #555; */
   width: 100%;  
   /* headerを手前に表示 */
   z-index:11;
@@ -30,20 +30,40 @@ header {
 
   /* title-navと.btnをY軸方向で中央ぞろえに */
   align-items: center; 
+
   /* title-navと.btnを横並びに */
-  display: flex;
+  /* display: flex; */
   
   /* .title-navと.btnを両端ぞろえに */
   justify-content: space-between;
 }
 
+.second-header {
+  background: #fff;
+  color: #000;
+  opacity: .7;
+  /* ヘッダーバーを固定 */
+  position: fixed; 
+  /* 上から0の位置に固定 */
+  top: 0;
+   /* 左から0の位置に固定 */
+  left: 0;
+   /* ヘッダーバーを非表示 */
+  display: none;
+}
+
 .title-nav {
+  float:left;
   display: flex;/* h1,nav,.btnを横並びに */
   align-items: center;/* h1,nav,.btnをY軸方向で中央ぞろえに */
 }
 
-header a {
+.first-header a {
   color:#fff;
+}
+
+.second-header a {
+  color:#000;
 }
 
 .title {
@@ -55,7 +75,21 @@ header nav ul {
 }
 
 header .btn {
+  float:right;
   display: flex;
+  background: #978F10;
+
+  /* 垂直方向の中央ぞろえ */
+  /* vertical-align: middle;←効かない */
+  line-height: 54px;
+}
+
+header .btn img {
+  align-self: center;
+}
+
+header .btn p {
+  color: #fff;
 }
 
 /*-------------------------------------------
@@ -276,7 +310,7 @@ footer {
 }
 
 nav {
-  background: orange;
+  /* background: orange; */
 }
 
 footer ul {
