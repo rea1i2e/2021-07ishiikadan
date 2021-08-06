@@ -42,231 +42,325 @@
   <!-- jQyery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+  <!-- flatpickr -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 </head>
 <body>
-  <div class="first-view">
 
+  <div class="first-view">
+    <!-- ３枚のスライドをアニメーションで順番に表示 -->
     <div class="main_img" style="background-image: url(img/mainbg01.jpg)"></div>
     <div class="main_img" style="background-image: url(img/mainbg02.jpg)"></div>
     <div class="main_img" style="background-image: url(img/mainbg03.jpg)"></div>
 
     <header>
-
-      <div class="header-wrapper first-header">
-        <div class="title-nav">
-          <h1>
-            <a class="title" href="">
-              <img src="img/logo01.png" alt="石井花壇のロゴ画像" width="40" height="40">
-              <p>石井花壇</p>
-            </a>
-          </h1>
-          <nav>
-            <ul>
-              <li><a href="">お部屋</a></li>
-              <li><a href="">お料理</a></li>
-              <li><a href="">温泉</a></li>
-            </ul>
-          </nav>
+      <!-- はじめに表示されるヘッダー -->
+      <div class="first-header">
+        <div class="header-wrapper">
+          <div class="title-nav">
+            <h1>
+              <a class="title" href="">
+                <img src="img/logo01.png" alt="石井花壇のロゴ画像" width="40" height="40">
+                <p>石井花壇</p>
+              </a>
+            </h1>
+            <nav>
+              <ul>
+                <li><a href="">お部屋</a></li>
+                <li><a href="">お料理</a></li>
+                <li><a href="">温泉</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="btn reserve-btn">
+            <img src="img/calender.png" alt="カレンダーのロゴ画像" width="22" height="22">
+            <p>宿泊予約</p>
+          </div>
         </div>
-        <a class="btn" href="">
-          <img src="img/calender.png" alt="カレンダーのロゴ画像" width="22" height="22">
-          <p>宿泊予約</p>
-        </a>
       </div>
 
-      <div class="header-wrapper second-header">
-        <div class="title-nav">
-          <h1>
-            <a class="title" href="">
-              <img src="img/logo02.png" alt="石井花壇のロゴ画像" width="40" height="40">
-              <p>石井花壇</p>
-            </a>
-          </h1>
-          <nav>
-            <ul>
-              <li><a href="">お部屋</a></li>
-              <li><a href="">お料理</a></li>
-              <li><a href="">温泉</a></li>
-            </ul>
-          </nav>
+      <!-- スクルールすると出現するヘッダー -->
+      <div  class="second-header">
+        <div class="header-wrapper">
+          <div class="title-nav">
+            <h1>
+              <a class="title" href="">
+                <img src="img/logo02.png" alt="石井花壇のロゴ画像" width="40" height="40">
+                <p>石井花壇</p>
+              </a>
+            </h1>
+            <nav>
+              <ul>
+                <li><a href="">お部屋</a></li>
+                <li><a href="">お料理</a></li>
+                <li><a href="">温泉</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="btn reserve-btn">
+            <img src="img/calender.png" alt="カレンダーのロゴ画像" width="22" height="22">
+            <p>宿泊予約</p>
+          </div>
         </div>
-        <a class="btn" href="">
-          <img src="img/calender.png" alt="カレンダーのロゴ画像" width="22" height="22">
-          <p>宿泊予約</p>
-        </a>
-      </div>
-      
+      </div> 
     </header>
 
-    <div class="modal">
+    <div id="modal-wrapper">
+      <div id="reserve-modal">
+        <img src="img/close.png" alt="閉じるボタン" id="close" width="18" height="18">
+        <h2>宿泊予約</h2>
+        <form class="reserve-form" action="">
+          <p><label for="name">お名前</label></p>
+          <p><input id="name" type="text" placeholder=" 例：石井正悟"></p>
       
+          <p><laber for="email">メールアドレス</laber></p>
+          <p><input id="email" type="text" placeholder=" 例：Example@example.com"></p>
+      
+          <p><label for="select-plan">ご希望プラン</label></p>
+          <p>
+            <select name="" id="select-plan">
+              <option hidden>プランを選択してください</option>
+              <option value="">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
+              <option value="">②平日に優雅に楽しむ、特別宿泊プラン</option>
+              <option value="">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
+            </select>
+          </p>
+      
+          <p><label for="flatpickr">日時</label></p>
+          <p>
+            <input type="text" id="flatpickr"  placeholder=" 日時を選択して下さい">
+          </p>
+      
+          <button>送信する</button>
+        </form>
+      </div>
     </div>
-    
+  
     <p class="copy">
       頑張る人の<br><br>頑張らない時間
     </p>
-  </div>
 
-  <section id="about">
-    <h2>温海温泉の<br>美しさに癒やされて</h2>
-    <p>
-      東北の奥座敷である温海温泉郷<br>
-      開湯は約1300年前とされ、役小角が<br>
-      発見したと伝えられます<br>
-    </p>
-    <p>
-      石井花壇は江戸より続く由緒ある旅館で<br>
-      クラシックな作りの中に大正ロマンあふれる<br>
-      内装を残しております
-    </p>
-    <p>
-      圧倒的癒やしの空間で<br>
-      頑張る現代人に<br>
-      頑張らない圧倒的な非日常をご提供します<br>
-    </p>
-    <p>
-      石井花壇
-    </p>
-  </section>
+  </div><!-- /.first-view -->
 
-  <section id="feature">
-    <ul>
-      <li>
-        <img src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
-        <div class="feature-desc">
-          <h2>喧騒から離れた空間<br>
-            心落ち着く至極のひととき</h2>
-          <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>
-            ひたすらにゆったりと…。<br>
-            最高級の「何もしない時間」をお過ごしください。</p>
-          <a class="feature-btn" href="">お部屋について</a>
+    <section id="about">
+      <h2>温海温泉の<br>美しさに癒やされて</h2>
+      <p>
+        東北の奥座敷である温海温泉郷<br>
+        開湯は約1300年前とされ、役小角が<br>
+        発見したと伝えられます<br>
+      </p>
+      <p>
+        石井花壇は江戸より続く由緒ある旅館で<br>
+        クラシックな作りの中に大正ロマンあふれる<br>
+        内装を残しております
+      </p>
+      <p>
+        圧倒的癒やしの空間で<br>
+        頑張る現代人に<br>
+        頑張らない圧倒的な非日常をご提供します<br>
+      </p>
+      <p>
+        石井花壇
+      </p>
+    </section>
+
+    <section id="feature">
+      <ul>
+        <li>
+          <img src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
+          <div class="feature-desc">
+            <h2>喧騒から離れた空間<br>
+              心落ち着く至極のひととき</h2>
+            <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>
+              ひたすらにゆったりと…。<br>
+              最高級の「何もしない時間」をお過ごしください。</p>
+            <a class="feature-btn" href="">お部屋について</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
+          <div class="feature-desc">
+            <h2>喧騒から離れた空間<br>
+              心落ち着く至極のひととき</h2>
+            <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>
+              ひたすらにゆったりと…。<br>
+              最高級の「何もしない時間」をお過ごしください。</p>
+            <a class="feature-btn" href="">お部屋について</a>
+          </div>
+        </li>
+
+        <li>
+          <img src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
+          <div class="feature-desc">
+            <h2>喧騒から離れた空間<br>
+              心落ち着く至極のひととき</h2>
+            <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>
+              ひたすらにゆったりと…。<br>
+              最高級の「何もしない時間」をお過ごしください。</p>
+            <a class="feature-btn" href="">お部屋について</a>
+          </div>
+        </li>
+
+      </ul>
+
+    </section>
+
+    <section id="plan">
+
+      <div  class="wrapper">
+        <h2>
+          <img src="img/logo02.png" alt="ロゴ画像">
+          <p>おすすめご宿泊プラン</p>
+        </h2>
+        <div class="plan-wrapper">
+          <div class="plan-item">
+            <img src="img/recommended01.jpg" alt="プランのイメージ画像">
+            <h3>朝食付きプラン、日本近海で取れた<br>
+              のどぐろを朝食として…</h3>
+            <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
+          </div>
+          <div class="plan-item">
+            <img src="img/recommended01.jpg" alt="プランのイメージ画像">
+            <h3>朝食付きプラン、日本近海で取れた<br>
+              のどぐろを朝食として…</h3>
+            <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
+          </div>
+          <div class="plan-item">
+            <img src="img/recommended01.jpg" alt="プランのイメージ画像">
+            <h3>朝食付きプラン、日本近海で取れた<br>
+              のどぐろを朝食として…</h3>
+            <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
+          </div>
         </div>
-      </li>
+      </div>
+      
+    </section>
 
-      <li>
-        <img src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
-        <div class="feature-desc">
-          <h2>喧騒から離れた空間<br>
-            心落ち着く至極のひととき</h2>
-          <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>
-            ひたすらにゆったりと…。<br>
-            最高級の「何もしない時間」をお過ごしください。</p>
-          <a class="feature-btn" href="">お部屋について</a>
-        </div>
-      </li>
-
-      <li>
-        <img src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
-        <div class="feature-desc">
-          <h2>喧騒から離れた空間<br>
-            心落ち着く至極のひととき</h2>
-          <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>
-            ひたすらにゆったりと…。<br>
-            最高級の「何もしない時間」をお過ごしください。</p>
-          <a class="feature-btn" href="">お部屋について</a>
-        </div>
-      </li>
-
-    </ul>
-
-  </section>
-
-  <section id="plan">
-
-    <div  class="wrapper">
+    <section id="news" class="wrapper">
+      
       <h2>
         <img src="img/logo02.png" alt="ロゴ画像">
-        <p>おすすめご宿泊プラン</p>
+        <p>お知らせ</p>
       </h2>
-      <div class="plan-wrapper">
-        <div class="plan-item">
-          <img src="img/recommended01.jpg" alt="プランのイメージ画像">
-          <h3>朝食付きプラン、日本近海で取れた<br>
-            のどぐろを朝食として…</h3>
-          <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
-        </div>
-        <div class="plan-item">
-          <img src="img/recommended01.jpg" alt="プランのイメージ画像">
-          <h3>朝食付きプラン、日本近海で取れた<br>
-            のどぐろを朝食として…</h3>
-          <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
-        </div>
-        <div class="plan-item">
-          <img src="img/recommended01.jpg" alt="プランのイメージ画像">
-          <h3>朝食付きプラン、日本近海で取れた<br>
-            のどぐろを朝食として…</h3>
-          <p>最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
-        </div>
-      </div>
-    </div>
+      
+      <nav class="news-nav">
+        <ul class="tab">
+          <li class="active-tab">営業情報</li>
+          <li>その他</li>
+        </ul>
+      </nav>
     
-  </section>
+      <div class="area">
 
-  <section id="news" class="wrapper">
-    
-    <h2>
-      <img src="img/logo02.png" alt="ロゴ画像">
-      <p>お知らせ</p>
-    </h2>
-    <nav class="news-nav">
-      <ul>
-        <li>営業情報</li>
-        <li>その他</li>
+          <dl class="news-wrapper show">
+          
+            <div class="news-item">
+              <img src="img/news01.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2020.12.24</dt>
+                <dd>年末最後の営業日は27日になります。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news01.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2020.12.24</dt>
+                <dd>年末最後の営業日は27日になります。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news01.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2020.12.24</dt>
+                <dd>年末最後の営業日は27日になります。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news01.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2020.12.24</dt>
+                <dd>年末最後の営業日は27日になります。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news01.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2020.12.24</dt>
+                <dd>年末最後の営業日は27日になります。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news01.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2020.12.24</dt>
+                <dd>年末最後の営業日は27日になります。</dd>
+              </div>
+            </div>
+          </dl>
+          
+          <dl class="news-wrapper">
+          
+            <div class="news-item">
+              <img src="img/news02.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2021.08.05</dt>
+                <dd>夕食のメニューが新しくなりました。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news02.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2021.08.05</dt>
+                <dd>夕食のメニューが新しくなりました。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news02.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2021.08.05</dt>
+                <dd>夕食のメニューが新しくなりました。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news02.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2021.08.05</dt>
+                <dd>夕食のメニューが新しくなりました。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news02.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2021.08.05</dt>
+                <dd>夕食のメニューが新しくなりました。</dd>
+              </div>
+            </div>
+          
+            <div class="news-item">
+              <img src="img/news02.jpg" alt="お知らせ画像">
+              <div class="news-desc">
+                <dt>2021.08.05</dt>
+                <dd>夕食のメニューが新しくなりました。</dd>
+              </div>
+            </div>
+          
+            
+
       </ul>
-    </nav>
-  
-    <dl class="news-wrapper">
-      
-      <div class="news-item">
-        <img src="img/news01.jpg" alt="お知らせ画像">
-        <div class="news-desc">
-          <dt>2020.12.24</dt>
-          <dd>年末最後の営業日は27日になります。</dd>
-        </div>
-      </div>
-      
-      <div class="news-item">
-        <img src="img/news01.jpg" alt="お知らせ画像">
-        <div class="news-desc">
-          <dt>2020.12.24</dt>
-          <dd>年末最後の営業日は27日になります。</dd>
-        </div>
-      </div>
-      
-      <div class="news-item">
-        <img src="img/news01.jpg" alt="お知らせ画像">
-        <div class="news-desc">
-          <dt>2020.12.24</dt>
-          <dd>年末最後の営業日は27日になります。</dd>
-        </div>
-      </div>
-      
-      <div class="news-item">
-        <img src="img/news01.jpg" alt="お知らせ画像">
-        <div class="news-desc">
-          <dt>2020.12.24</dt>
-          <dd>年末最後の営業日は27日になります。</dd>
-        </div>
-      </div>
-      
-      <div class="news-item">
-        <img src="img/news01.jpg" alt="お知らせ画像">
-        <div class="news-desc">
-          <dt>2020.12.24</dt>
-          <dd>年末最後の営業日は27日になります。</dd>
-        </div>
-      </div>
-      
-      <div class="news-item">
-        <img src="img/news01.jpg" alt="お知らせ画像">
-        <div class="news-desc">
-          <dt>2020.12.24</dt>
-          <dd>年末最後の営業日は27日になります。</dd>
-        </div>
-      </div>
-    </dl>
 
-  </section>
+    </section>
     
     <section id="access">
       
@@ -324,7 +418,11 @@
       </div>
     </footer>
 
+    <!-- flatpickr -->
+    <script>flatpickr("#flatpickr", {minDate:"today",mode:"multiple"});</script>
 
+
+    <!-- jQuery -->
     <script src="script.js"></script>
   </body>
 </html>
