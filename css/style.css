@@ -2,11 +2,13 @@
 
 body {
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+  font-size: 100%;
 }
 
 li {
   list-style: none;
 }
+
 
 a {
   text-decoration: none;
@@ -29,7 +31,8 @@ header
   /* background: #555; */
   width: 100%;
   height: 80px;
-  padding: 0 20px;
+  /* .reserve.btnの右上の余白を基準に設定 */
+  padding: 13px 20px;
   
   /* headerを手前に表示 */
   position: absolute;
@@ -43,7 +46,43 @@ header
   
   /* .title-navと.reserve-btnをY軸方向で中央ぞろえに */
   align-items: center;
+  
+}
 
+
+h1 {
+  font-family: 'Toppan Bunkyu Midashi Mincho';
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: .18em;
+}
+
+/* h1のロゴとテキストの間の余白 */
+.title p {
+  margin-left: 15px;
+}
+
+.title-nav {
+  /* background: yellow; */
+  
+  /* h1とnavを横並びに */
+  display: flex;
+  
+  /* h1とnavをY軸方向で中央ぞろえに */
+  align-items: center;
+}
+
+header nav {
+  margin-left: 90px;
+}
+
+header nav ul {
+  /* navの中身を横並びに */
+  display: flex;
+}
+
+header nav li {
+  margin-left: 30px;
 }
 
 /* スクロールすると出現するヘッダー */
@@ -64,21 +103,6 @@ header
   z-index: 12;
 }
 
-.title-nav {
-  /* background: yellow; */
-  
-  /* h1とnavを横並びに */
-  display: flex;
-  
-  /* h1とnavをY軸方向で中央ぞろえに */
-  align-items: center;
-}
-
-header nav ul {
-  /* navの中身を横並びに */
-  display: flex;
-}
-
 .first-header a {
   color:#fff;
 }
@@ -89,12 +113,14 @@ header nav ul {
 
 .title {
   display: flex;
+  align-items: center;
 }
 
 
 .reserve-btn {
   display: flex;
   background: #978F10;
+  padding: 16px 37px;
 }
 
 .reserve-btn img {
@@ -103,7 +129,9 @@ header nav ul {
 
 .reserve-btn p {
   color: #fff;
+  margin-left: 10px;
 }
+
 
 /*-------------------------------------------
 first-view
@@ -117,7 +145,7 @@ first-view
 
 .main_img {
   z-index:10;
-  opacity: 0;
+  /* opacity: 0; */
   width: 100%;
   height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
   background-position: center center;
@@ -126,8 +154,8 @@ first-view
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-animation: anime 18s 0s infinite;
-  animation: anime 18s 0s infinite;
+  /* -webkit-animation: anime 18s 0s infinite;
+  animation: anime 18s 0s infinite; */
 }
 
   .main_img:nth-of-type(2) {
@@ -178,13 +206,19 @@ first-view
 
 .copy {
   color: #fff;
+  font-size: 2.125rem;
+  font-weight: 800em;
+  letter-spacing: .23em;
+  line-height: 1.25;
   -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
   writing-mode: vertical-rl;/* 縦書き指定 */
   position: absolute;
   z-index:12;
-  top:50%;
+  /* top:50%;
     left:50%;
-    transform:translate(-50%,-50%);
+    transform:translate(-50%,-50%); */
+    top: 18.9vw;
+    left: 67.2vw;
 }
 
 
