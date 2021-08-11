@@ -112,26 +112,22 @@
         <img src="img/close.png" alt="閉じるボタン" id="close" width="18" height="18">
         <h2>宿泊予約</h2>
         <form class="reserve-form" action="">
-          <p><label for="name">お名前</label></p>
-          <p><input id="name" type="text" placeholder=" 例：石井正悟"></p>
+          <label for="name">お名前</label>
+          <input id="name" type="text" placeholder=" 例：石井正悟">
       
-          <p><laber for="email">メールアドレス</laber></p>
-          <p><input id="email" type="text" placeholder=" 例：Example@example.com"></p>
+          <label for="email">メールアドレス</label>
+          <input id="email" type="text" placeholder=" 例：Example@example.com">
       
-          <p><label for="select-plan">ご希望プラン</label></p>
-          <p>
+          <label for="select-plan">ご希望プラン（空いているプランのみ表示されます）</label>
             <select name="" id="select-plan">
               <option hidden>プランを選択してください</option>
               <option value="">①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
               <option value="">②平日に優雅に楽しむ、特別宿泊プラン</option>
               <option value="">③絶景貸切露天と個室会席を満喫できるファミリープラン</option>
             </select>
-          </p>
-      
-          <p><label for="flatpickr">日時</label></p>
-          <p>
-            <input type="text" id="flatpickr"  placeholder=" 日時を選択して下さい">
-          </p>
+          
+          <label for="flatpickr">日時選択</label>
+          <input type="text" id="flatpickr"  placeholder=" 日時を選択して下さい">
       
           <button>送信する</button>
         </form>
