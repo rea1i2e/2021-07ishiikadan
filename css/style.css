@@ -152,7 +152,7 @@ first-view
 
 .main_img {
   z-index:10;
-  /* opacity: 0; */
+  opacity: 0;
   width: 100%;
   height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
   background-position: center center;
@@ -161,8 +161,8 @@ first-view
   position: absolute;
   left: 0;
   top: 0;
-  /* -webkit-animation: anime 18s 0s infinite;
-  animation: anime 18s 0s infinite; */
+  -webkit-animation: anime 18s 0s infinite;
+  animation: anime 18s 0s infinite;
 }
 
   .main_img:nth-of-type(2) {
@@ -221,9 +221,6 @@ first-view
   writing-mode: vertical-rl;/* 縦書き指定 */
   position: absolute;
   z-index:12;
-  /* top:50%;
-    left:50%;
-    transform:translate(-50%,-50%); */
     top: 18.9vw;
     left: 67.2vw;
 }
