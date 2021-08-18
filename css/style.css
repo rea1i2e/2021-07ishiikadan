@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+/* 共通のCSS */
 body {
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
   font-size: 100%;
@@ -39,7 +40,11 @@ img {
   line-height: 1;
 }
 
-
+/* 画像の背景 */
+.img-bg {
+  background:#ccc;
+  height: fit-content;  /* 背景画像が画像からはみ出さないようにする */
+}
 
 /* -------------------------------------------
 header
@@ -459,12 +464,15 @@ first-view
   width: calc( 100% * 331 / 1180 );
 }
 
+.plan-img-wrapper {
+  margin-bottom: calc( 32px - 6px );
+}
+
 .plan-item img {
   width: 100%;
   height: 209px;
   
   /* imgとh3の間の余白には、h3のline-heightが含まれている */
-  margin-bottom: calc( 32px - 6px );
 }
 
 .plan-item h3 {
