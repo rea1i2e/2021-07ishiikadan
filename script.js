@@ -1,3 +1,4 @@
+// jQuery
 $(function () {
 
   // scrollイベントを取得した際の処理を定義
@@ -43,7 +44,15 @@ $(function () {
 
 });
 
+// flatpickr
+flatpickr(
+  "#flatpickr", {
+    minDate:"today",mode:"multiple"
+  }
+);
 
+
+// AOS.js
 AOS.init({
   offset: 100,
     // アニメーションの開始位置（トリガーの元の位置より100px下に設定）
