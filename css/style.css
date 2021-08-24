@@ -1,9 +1,17 @@
 @charset "UTF-8";
 
 /* 共通のCSS */
+.body-wrapper {
+  width: 100vw;
+  margin: 0 auto;
+}
+
 body {
+  /* background: #ccc; */
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
   font-size: 100%;
+  width: 100%;
+  max-width: 1920px;
 }
 
 li {
@@ -21,7 +29,8 @@ img {
 
 .wrapper {
   /* background: #ccc; */
-  width: 1180px;
+  width: calc( 100vw - 100px );
+  max-width: 1180px;
   margin: 0 auto;
   padding: 60px 0;
 }
@@ -52,12 +61,18 @@ header
 .header-wrapper {
   /* background: #555; */
   width: 100%;
+  max-width: 1920px;
+
   height: 80px;
   /* .reserve.btnの右上の余白を基準に設定 */
   padding: 13px 20px;
   
   /* headerを手前に表示 */
   position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   z-index:11;
   
   /* .title-navと.reserve-btnを横並びに */
@@ -167,7 +182,11 @@ first-view
 ------------------------------------------- */
 
 .first-view {
+  width: 100vw;
+  max-width: 1920px;
+  margin: 0 auto;
   height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  max-height: 1079px;
   overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
   position: relative;
 }
@@ -331,7 +350,8 @@ first-view
 #about
 -------------------------------------------*/
 #about {
-  margin-bottom: 106px;
+  max-width:1920px;
+  margin: 0 auto 106px;
   height: 681px;
 }
 
@@ -447,7 +467,10 @@ first-view
   background-image: url(../img/bg02.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;/* 画面幅に合わせる */
+  /* width: 100vw;画面幅に合わせる */
+  width: 100%;
+  max-width:1920px;
+  margin: 0 auto;
   height: 775px;
 }
 
@@ -470,7 +493,7 @@ first-view
 
 .plan-item img {
   width: 100%;
-  height: 209px;
+  /* height: 209px; 不要*/
   
   /* imgとh3の間の余白には、h3のline-heightが含まれている */
 }
@@ -581,7 +604,9 @@ first-view
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;/* 画面幅に合わせる */
+  width: 100%;
+  max-width:1920px;
+  margin: 0 auto;
 }
 
 #access .wrapper {
@@ -646,7 +671,10 @@ footer {
   background-image: url(../img/bg3.png);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;/* 画面幅に合わせる */
+  width: 100%;
+  max-width:1920px;
+  margin: 0 auto;
+
   /* height: 775px; */
   text-align: center;
   padding-top: 64px;

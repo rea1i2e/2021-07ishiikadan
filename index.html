@@ -51,7 +51,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
-<body>
+<body><div class="body-wrapper">
 
   <div class="first-view">
     <!-- ３枚のスライドをアニメーションで順番に表示 -->
@@ -173,7 +173,9 @@
     <section id="feature">
       <ul>
         <li>
-          <div class="img-bg" data-aos="fade-up"><img data-aos="fade-up" src="img/oheya-top.jpg" alt="お部屋のイメージ画像"></div>
+          <div class="img-bg" data-aos="fade-up">
+            <img data-aos="fade-up" src="img/oheya-top.jpg" alt="お部屋のイメージ画像">
+          </div>
           <div data-aos="fade-up" class="feature-desc">
             <h2>喧騒から離れた空間<br>
               心落ち着く至極のひととき</h2>
@@ -224,7 +226,9 @@
         <div class="plan-wrapper">
           
           <div data-aos="fade-up" class="plan-item">
-            <div class="img-bg plan-img-wrapper"><img  data-aos="fade-up"src="img/recommended01.jpg" alt="プランのイメージ画像"></div>
+            <div class="img-bg plan-img-wrapper">
+              <img  data-aos="fade-up"src="img/recommended01.jpg" alt="プランのイメージ画像">
+            </div>
             <h3 data-aos="fade-up">朝食付きプラン、日本近海で取れた<br>
               のどぐろを朝食として…</h3>
             <p data-aos="fade-up">最高級と称されるのどぐろ、正式には「アカムツ」と呼ばれる魚、味は独特の上品な味わいで、焼いても煮ても美味</p>
@@ -248,8 +252,8 @@
       </div><!-- /.wrapper -->
     </section>
 
-    <section id="news" class="wrapper">
-      
+    <section id="news">
+      <div  class="wrapper">
       <h2>
         <img class="h2-logo" src="img/logo02.png" alt="ロゴ画像">
         <p>お知らせ</p>
@@ -364,7 +368,7 @@
             </div>
 
       </ul>
-
+    </div><!-- /.wrapper -->
     </section>
     
     <section id="access">
@@ -390,9 +394,9 @@
           </div>
         </div>
 
-        <!-- <div data-aos="fade-up" class="map img-bg">
+        <div data-aos="fade-up" class="map img-bg">
           <iframe data-aos="fade-up" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d32335.198711289126!2d139.57254039948845!3d38.6320726!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c6dbd6c03ae15%3A0x10bc5da99bc816ef!2z44CSOTk5LTcyMDUg5bGx5b2i55yM6ba05bKh5biC5rip5rW3!5e0!3m2!1sja!2sjp!4v1628898527623!5m2!1sja!2sjp" width="792" height="592" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div> -->
+        </div>
 
 
       </div>
@@ -420,6 +424,8 @@
       </div>
     </footer>
 
+  </div><!-- /.body-wrapper -->
+  
   <!-- jQuery / flatpickr / AOS.js  -->
   <script src="script.js"></script>
 
