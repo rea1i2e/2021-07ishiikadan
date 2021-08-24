@@ -1,17 +1,15 @@
 @charset "UTF-8";
 
 /* 共通のCSS */
-.body-wrapper {
-  width: 100vw;
-  margin: 0 auto;
-}
 
 body {
   /* background: #ccc; */
+  /* border: 5px solid pink; */
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
   font-size: 100%;
   width: 100%;
   max-width: 1920px;
+  margin: 0 auto;
 }
 
 li {
