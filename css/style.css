@@ -4,7 +4,7 @@
 
 body {
   /* background: #ccc; */
-  /* border: 5px solid pink; */
+  border: 5px solid pink;
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
   font-size: 100%;
   width: 100%;
@@ -399,6 +399,7 @@ first-view
 #feature
 -------------------------------------------*/
 #feature li {
+  /* background-color: palegoldenrod; */
   display: flex;
   margin-bottom: 122px;
 }
@@ -414,10 +415,37 @@ first-view
 }
 
 #feature img {
-  width: calc( 105000vw / 1920 );
-  /* width: 54.6875vw; */
-  height: calc( 54500vw / 1920 );
+  /* width: calc( 100vw * 1050 / 1920 ); */
+  width: calc( 100vw - 137px - 630px );
+  max-width: 1050px;
+  /* height: calc( 100vw * 545 / 1920 ); */
+  /* max-height: 545px; */
+  height: 545px;
+  /* width: calc( 105000vw / 1920 ); */
+  /* height: calc( 54500vw / 1920 ); */
   object-fit: cover;
+}
+
+
+#feature .feature-desc {
+  /* background: #ccc; */
+  /* width: 30vw; */
+  width: 870px;
+  align-content: center;
+  padding-top: calc( 32px - 13px );
+}
+
+#feature ul li:nth-child(odd) .feature-desc {
+  /* background-color: brown; */
+  padding-right:100px;
+  padding-left:137px;
+}
+
+#feature ul li:nth-child(even) .feature-desc {
+  /* background-color: green; */
+  padding-left:100px;
+  padding-right:137px;
+  
 }
 
 #feature h2 {
@@ -432,14 +460,6 @@ first-view
 #feature p {
   line-height: 2;
   margin-bottom: calc( 75px - 8px );
-}
-
-#feature .feature-desc {
-  /* background: #ccc; */
-  width: 30vw;
-  align-content: center;
-  margin-left:137px;
-  padding-top: calc( 32px - 13px );
 }
 
 .feature-btn {
