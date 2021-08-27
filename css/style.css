@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
 /* 共通のCSS */
+* {
+  box-sizing: border-box;
+}
 
 body {
   /* background: #ccc; */
-  border: 5px solid pink;
+  /* border: 5px solid pink; */
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
   font-size: 100%;
   width: 100%;
@@ -630,6 +633,7 @@ first-view
 }
 
 #access .wrapper {
+  /* background-color: palegoldenrod; */
   padding-bottom: 110px;
 }
 
@@ -638,23 +642,28 @@ first-view
 }
 
 .access-wrapper {
+  /* background: lime; */
   display: flex;
   margin-bottom: 69px;
+  width: 1180px;
 }
 
 .access-wrapper img {
-  width: calc( ( 100vw - 100px ) * 656 / 1180 );
+  width: calc( 656px - (.55 * ( 1536px - 100vw ) ) );
   max-width: 656px;
-  height: calc( ( 100vw - 100px ) * 370 / 1180 );
-  max-height: 370px;
+  height: 370px;
   object-fit: cover;
 }
 
 .access-info {
-  /* box-sizing: border-box; */
-  width: 524px;
+  /* background: yellow; */
+  /* width: calc( 83px + 568px + 50px ); */
+  width: 702px;
   padding-left: 83px;
+  padding-right: 50px;
   padding-top: 12px;
+  margin-right: calc( -128px - 50px );
+  /* display: none; */
 }
 
 .access-info dt {
@@ -689,9 +698,9 @@ first-view
 
 
 /* 改行させない */
-.no-wrap {
+/* .no-wrap {
   white-space: nowrap;
-}
+} */
 
 /*-------------------------------------------
 footer
