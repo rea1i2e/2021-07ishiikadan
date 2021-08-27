@@ -645,11 +645,11 @@ first-view
   /* background: lime; */
   display: flex;
   margin-bottom: 69px;
-  width: 1180px;
+  /* width: 1180px; */
 }
 
 .access-wrapper img {
-  width: calc( 656px - (.55 * ( 1536px - 100vw ) ) );
+  width: calc( 656px - (.74 * ( 1536px - 100vw ) ) );
   max-width: 656px;
   height: 370px;
   object-fit: cover;
@@ -663,7 +663,6 @@ first-view
   padding-right: 50px;
   padding-top: 12px;
   margin-right: calc( -128px - 50px );
-  /* display: none; */
 }
 
 .access-info dt {
