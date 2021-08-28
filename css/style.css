@@ -10,6 +10,7 @@ body {
   /* border: 5px solid pink; */
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
   font-size: 100%;
+  font-weight: 500;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -26,6 +27,20 @@ a {
 
 img {
   vertical-align: bottom;
+}
+
+
+h1 {
+  /* background: brown; */
+  font-family: 'Toppan Bunkyu Midashi Mincho';
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: .18em;
+  /* letter-spacing: calc( 17em / 96 ); */
+}
+
+h2, h3 {
+  font-weight:500;
 }
 
 .wrapper {
@@ -88,12 +103,6 @@ header
 }
 
 
-h1 {
-  font-family: 'Toppan Bunkyu Midashi Mincho';
-  font-weight: 800;
-  font-size: 2rem;
-  letter-spacing: .18em;
-}
 
 /* h1のロゴとテキストの間の余白 */
 .title p {
@@ -111,7 +120,9 @@ h1 {
 }
 
 header nav {
-  margin-left: 90px;
+  /* background: brown; */
+  margin-left: 120px;
+  /* margin-left: calc( 120px - 2.83px ) */
 }
 
 header nav ul {
@@ -119,7 +130,7 @@ header nav ul {
   display: flex;
 }
 
-header nav li {
+header nav li:not(:first-child) {
   margin-left: 30px;
 }
 
@@ -159,7 +170,8 @@ header nav li {
 .reserve-btn {
   display: flex;
   background: #978F10;
-  padding: 16px 37px;
+  /* padding: 16px 37px; */
+  padding: 0 37px;
   cursor: pointer;
 }
 
@@ -175,6 +187,8 @@ header nav li {
 .reserve-btn p {
   color: #fff;
   margin-left: 10px;
+  line-height: 54px;
+  font-weight: 800;
 }
 
 
@@ -514,7 +528,8 @@ first-view
 
 .plan-item img {
   width: 100%;
-  /* height: 209px; 不要*/
+  height: 209px; 
+  object-fit: cover;
   
   /* imgとh3の間の余白には、h3のline-heightが含まれている */
 }
@@ -537,6 +552,11 @@ first-view
 /*-------------------------------------------
 #news
 -------------------------------------------*/
+#news {
+  /* background: lime; */
+  height: 757px;
+}
+
 #news h2 {
   margin-bottom: 46px;
 }
@@ -546,6 +566,7 @@ first-view
   /* background: #eee; */
   display: flex;
   justify-content: center;
+  /* デザインカンプでは、中央から10.5px右にずれた位置になっているが、意図不明のため中央に合わせた。 */
 }
 
 .news-item {
@@ -617,6 +638,7 @@ first-view
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  /* デザインカンプでは、右側のnews-itemが6px右にずれているが、ずれは反映していない。 */
 }
 
 /*-------------------------------------------
@@ -671,7 +693,7 @@ first-view
   margin-bottom: 8px;
 }
 
-.access-info dd {
+.access-info dd, .access-info p{
   font-weight: 500;
   line-height: 2;
   margin-bottom: 8px;
@@ -721,7 +743,8 @@ footer {
 
 footer ul {
   /* background: pink; */
-  margin: 0 auto 80px;
+  margin: 0 auto 82px;
+  /* 余白96px - liのline-spacing14px = 82px */
   -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
   writing-mode: vertical-rl;/* 縦書き指定 */
   text-align: left;
@@ -738,13 +761,14 @@ footer li:last-child {
   margin-left: 0;
 }
 
-footer h2 {
+footer h2 p {
   /* background: green; */
   font-size: 2rem;
   font-weight:800;
   letter-spacing: .18em;
   line-height: 1;
   margin-bottom: 72px;
+  padding-left: .18em;
 }
 
 footer address {
@@ -767,21 +791,11 @@ footer address p {
 
 }
 
-/*-------------------------------------------
-PC
--------------------------------------------*/
-@media screen and (min-width: 600px) {
-  
-  /*-------------------------------------------
-  Mainvisual
-  -------------------------------------------*/
-  
-  /*-------------------------------------------
-  About
-  -------------------------------------------*/
- 
-  /*-------------------------------------------
-  
-  -------------------------------------------*/
+/*画面幅が767px以下の場合（スマホ）に適用するCSSを記入*/
+@media screen and (max-width: 767px) {
+  .wrapper {
+    width: 90%;
+  }
+
   
 }
