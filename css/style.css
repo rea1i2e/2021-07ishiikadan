@@ -51,6 +51,10 @@ h2, h3 {
   padding: 60px 0;
 }
 
+.text-block {
+  display: inline-block;
+}
+
 /* #plan以降のセクションの共通のh2に関するCSS（footerを除く） */
 .wrapper h2 {
   text-align: center;
@@ -365,7 +369,7 @@ first-view
 #about
 -------------------------------------------*/
 #about {
-  max-width:1920px;
+  /* max-width:1920px; bodyにあるから不要 */
   margin: 0 auto 106px;
   height: 681px;
 }
@@ -388,9 +392,7 @@ first-view
 #about h2 {
   /* background: yellow; */
   font-size: 1.75rem;
-  /* letter-spacing: .5em; */
   letter-spacing: .5em;
-  /* line-height: 2.18; */
   line-height: calc( (28 + 33 ) / 28 );
   margin-left: 92.5px;
 }
@@ -401,9 +403,12 @@ first-view
   line-height: 2.18;
   line-height: 2.375;
   line-height: calc( (22 + 16) / 16 );
-
-  margin-left: 92.5px;
   padding-top: 84px;
+}
+
+/* デザインカンプでは、「石井花壇」の左側にも余白がある状態で中央揃えしているが、それだと少し右寄りになってしまうので、デザインとズレるが「石井花壇」の左側の余白は取り除いた */
+#about p:not(:last-child) {
+  margin-left: 92.5px;
 }
 
 #about p:last-child {
