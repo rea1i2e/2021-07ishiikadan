@@ -432,6 +432,7 @@ first-view
   margin-bottom: 122px;
 }
 
+
 #feature li:last-child {
   margin-bottom: 78px;
 }
@@ -443,17 +444,11 @@ first-view
 }
 
 #feature img {
-  /* width: calc( 100vw * 1050 / 1920 ); */
   width: calc( 100vw - 137px - 630px );
   max-width: 1050px;
-  /* height: calc( 100vw * 545 / 1920 ); */
-  /* max-height: 545px; */
   height: 545px;
-  /* width: calc( 105000vw / 1920 ); */
-  /* height: calc( 54500vw / 1920 ); */
   object-fit: cover;
 }
-
 
 #feature .feature-desc {
   /* background: #ccc; */
@@ -816,6 +811,15 @@ footer address p {
 
   #about p:last-child {
     font-size: 1.2rem;
+  }
+
+  #feature li {
+    display: block;
+  }
+
+  #feature img {
+    width: 100%;
+    max-width: 100%;
   }
 
 }
