@@ -202,18 +202,23 @@ first-view
 .first-view {
   width: 100vw;
   max-width: 1920px;
-  margin: 0 auto;
-  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
-  max-height: 1079px;
+  /* height: calc( 107900vw / 1920 ); 背景画像の縦横比に合わせる */
+  height: 100vw;
+  max-height: 1080px;
   overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
   position: relative;
+  margin: 0 auto;
 }
 
 .main_img {
   z-index:10;
   opacity: 0;
-  width: 100%;
-  height: calc( 107900vw / 1920 );/* 背景画像の縦横比に合わせる */
+  /* width: 100%;
+  height: calc( 107900vw / 1920 );背景画像の縦横比に合わせる */
+  width: 100vw;
+  max-width: 1920px;
+  height: 100vw;
+  max-height: 1080px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -273,7 +278,7 @@ first-view
 .copy {
   color: #fff;
   font-size: 2.125rem;
-  font-weight: 800em;
+  font-weight: 800;
   letter-spacing: .23em;
   line-height: 1.25;
   -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
