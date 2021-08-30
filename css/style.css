@@ -87,12 +87,11 @@ header
   /* .reserve.btnの右上の余白を基準に設定 */
   padding: 13px 20px;
   
-  /* headerを手前に表示 */
+  /* headerを手前中央に表示 */
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-
   z-index:11;
   
   /* .title-navと.reserve-btnを横並びに */
@@ -103,7 +102,6 @@ header
   
   /* .title-navと.reserve-btnをY軸方向で中央ぞろえに */
   align-items: center;
-  
 }
 
 
@@ -114,8 +112,9 @@ header
 }
 
 .title-nav {
-  /* background: yellow; */
-  
+  /* background: brown; */
+  /* width: calc( 100% * 532 / 1880 ); */
+  /* width: 532px; */
   /* h1とnavを横並びに */
   display: flex;
   
@@ -125,8 +124,8 @@ header
 
 header nav {
   /* background: brown; */
-  margin-left: 120px;
-  /* margin-left: calc( 120px - 2.83px ) */
+  /* margin-left: 120px; */
+  margin-left: calc( 100vw * 120 / 1920 );
 }
 
 header nav ul {
@@ -795,6 +794,12 @@ footer address p {
   font-weight: 500;
 
 }
+
+/*画面幅が1024px以下の場合（タブレット）に適用するCSSを記入*/
+@media screen and (max-width: 1024px) {
+
+}
+
 
 /*画面幅が767px以下の場合（スマホ）に適用するCSSを記入*/
 @media screen and (max-width: 767px) {
