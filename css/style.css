@@ -398,21 +398,23 @@ first-view
   font-size: 1.75rem;
   letter-spacing: .5em;
   line-height: calc( (28 + 33 ) / 28 );
-  margin-left: 92.5px;
+  /* margin-left: 92.5px; */
+  margin-left: calc( 92.5em / 28 );
+  margin-left: calc( 45em / 28 );
 }
 
 #about p {
   /* background: orange; */
   letter-spacing: .37em;
-  line-height: 2.18;
-  line-height: 2.375;
   line-height: calc( (22 + 16) / 16 );
   padding-top: 84px;
 }
 
 /* デザインカンプでは、「石井花壇」の左側にも余白がある状態で中央揃えしているが、それだと少し右寄りになってしまうので、デザインとズレるが「石井花壇」の左側の余白は取り除いた */
+
 #about p:not(:last-child) {
-  margin-left: 92.5px;
+  /* margin-left: 92.5px; */
+  margin-left: calc( 92.5em / 16 );
 }
 
 #about p:last-child {
@@ -802,6 +804,19 @@ footer address p {
 
 /*画面幅が1024px以下の場合（タブレット）に適用するCSSを記入*/
 @media screen and (max-width: 1024px) {
+
+  #about h2 {
+    font-size: 1.5rem;
+    margin-left: calc( 45em / 28 );
+  }
+
+  #about p:not(:last-child) {
+    margin-left: calc( 45em / 16 );
+  }
+
+  #about p:last-child {
+    font-size: 1.2rem;
+  }
 
 }
 
