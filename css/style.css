@@ -714,12 +714,6 @@ first-view
   vertical-align: top;
 }
 
-
-/* 下へ */
-
-
-/* 下へ　終わり */
-
 /*-------------------------------------------
 footer
 -------------------------------------------*/
@@ -850,6 +844,26 @@ footer address p {
     justify-content: space-between;
   }
   
+  .access-wrapper {
+    display: block;
+  }
+
+  .access-wrapper img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+
+  .access-info {
+    width: 100%;
+  }
+
+  .access-info dt {
+    font-weight: 800;
+    line-height: 2;
+    margin-bottom: 8px;
+  }
+
 }
 
 
