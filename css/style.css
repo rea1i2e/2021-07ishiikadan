@@ -48,7 +48,7 @@ h2, h3 {
   width: calc( 100vw - 100px );
   max-width: 1180px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 60px 0 0;
 }
 
 .text-block {
@@ -553,16 +553,13 @@ first-view
   line-height: 2;
 }
 
-/* 下へ */
-
-/* 下へ　終わり */
 
 /*-------------------------------------------
 #news
 -------------------------------------------*/
 #news {
   /* background: lime; */
-  height: 757px;
+  padding-bottom: 40px;
 }
 
 #news h2 {
@@ -570,28 +567,60 @@ first-view
 }
 
 .tab {
-  /* text-align: center; */
-  /* background: #eee; */
+  /* background: yellow; */
   display: flex;
   justify-content: center;
   /* デザインカンプでは、中央から10.5px右にずれた位置になっているが、意図不明のため中央に合わせた。 */
 }
 
+/* タブメニューに関するCSS */
+.tab li {
+  cursor: pointer;
+  margin-left: 53px;
+  margin-bottom: 49px;
+  line-height: 1;
+  font-weight: 500;
+}
+
+.tab li:first-child {
+  margin-left: 0;
+}
+
+.tab li.active-tab {
+  text-decoration: underline;
+  cursor: auto;
+}
+
+.area dl {
+  display: none;
+}
+
+.area .show {
+  /* background: brown; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* デザインカンプでは、右側のnews-itemが6px右にずれているが、ずれは反映していない。 */
+}
+
+
 .news-item {
   background: #eee;
   width: calc( 100% * 570 / 1180 );
   display:flex;
-  margin-bottom: 20px;
   padding: 15px 10px;
+  margin-bottom: 20px;
 }
+
+/* .news-item:not(:nth-last-child(-n+2)) {
+  margin-bottom: 20px;
+} */
 
 .news-item img {
   width: calc( ( 100vw - 100px ) * 103 / 1180 );
   max-width: 103px;
-  /* width: 103px; */
   height: calc( ( 100vw - 100px ) * 100 / 1180 );
   max-height: 100px;
-  /* height: 100px; */
   object-fit: cover;
 }
 
@@ -607,46 +636,6 @@ first-view
 
 .news-desc dd {
   line-height: 2;
-}
-
-
-/* .clearfix:after {
-  content: "";
-  display: block;
-  clear: both;
-} */
-
-/* タブメニューに関するCSS */
-.tab li {
-  cursor: pointer;
-  margin-left: 53px;
-  /* margin-right: 53px; */
-  margin-bottom: 49px;
-  line-height: 1;
-  font-weight: 500;
-}
-
-.tab li:first-child {
-  margin-left: 0;
-}
-/* .tab li:last-child {
-  margin-right: 0;
-} */
-
-.tab li.active-tab {
-  text-decoration: underline;
-  cursor: auto;
-}
-
-.area dl {
-  display: none;
-}
-
-.area .show {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /* デザインカンプでは、右側のnews-itemが6px右にずれているが、ずれは反映していない。 */
 }
 
 /*-------------------------------------------
@@ -726,10 +715,10 @@ first-view
 }
 
 
-/* 改行させない */
-/* .no-wrap {
-  white-space: nowrap;
-} */
+/* 下へ */
+
+
+/* 下へ　終わり */
 
 /*-------------------------------------------
 footer
@@ -843,6 +832,22 @@ footer address p {
   
   .plan-item p {
     line-height: 1.8;
+  }
+
+
+  .news-item {
+    width: 100%;
+    display:flex;
+  }
+
+  .news-item img {
+    width: 103px;
+    height: 100px;
+  }
+
+  .area .show {
+    display: block;
+    justify-content: space-between;
   }
   
 }
