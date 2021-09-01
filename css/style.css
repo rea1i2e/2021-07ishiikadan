@@ -138,6 +138,10 @@ header nav li:not(:first-child) {
   margin-left: 30px;
 }
 
+.first-header {
+  z-index: 11;
+}
+
 /* スクロールすると出現するヘッダー */
 .second-header {
   opacity: .7;
@@ -195,6 +199,10 @@ header nav li:not(:first-child) {
   font-weight: 800;
 }
 
+.btn {
+	display: none;
+}
+
 
 /* -------------------------------------------
 first-view
@@ -204,7 +212,7 @@ first-view
   width: 100vw;
   max-width: 1920px;
   /* height: calc( 107900vw / 1920 ); 背景画像の縦横比に合わせる */
-  height: 100vw;
+  height: 100vh;
   max-height: 1080px;
   overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
   position: relative;
@@ -218,7 +226,7 @@ first-view
   height: calc( 107900vw / 1920 );背景画像の縦横比に合わせる */
   width: 100vw;
   max-width: 1920px;
-  height: 100vw;
+  height: 100vh;
   max-height: 1080px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -285,7 +293,7 @@ first-view
   -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
   writing-mode: vertical-rl;/* 縦書き指定 */
   position: absolute;
-  z-index:12;
+  z-index:10;
     top: 18.9vw;
     left: 67.2vw;
 }
@@ -898,9 +906,134 @@ footer address p {
 
 /*画面幅が767px以下の場合（スマホ）に適用するCSSを記入*/
 @media screen and (max-width: 767px) {
+  /* 一時的に非表示 */
+  #about, #feature, #plan, #news, #access, footer {
+    display: none;
+  } 
+  /* 一時的に非表示終わり */
+
   .wrapper {
     width: 90%;
   }
 
+  .btn-wrapper {
+		display: flex;
+		align-items: center;
+		position: fixed;
+		top: 16px;
+		right: 16px;
+		z-index: 100;
+	}
   
+  button {
+		margin: 0;
+		padding: 0;
+		outline: 0;
+		border: 0;
+		border-radius: 0;
+		background: transparent;
+		color: inherit;
+		vertical-align: middle;
+		text-align: inherit;
+		font: inherit;
+		-webkit-appearance: none;
+		appearance: none;
+	}
+	
+	.btn {
+		display: block;
+		width: 48px;
+		height: 48px;
+		order: 2;
+		margin-left: 16px;
+	}
+	/***** 真ん中のバーガー線 *****/
+	.btn-line {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 4px;
+		background-color: #fff;
+		transition: .2s;
+	}
+
+  .btn-line::before , .btn-line::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		transition: .5s;
+	}
+
+	.btn-line::before {
+		transform: translateY(-16px);
+	}
+	.btn-line::after {
+		transform: translateY(16px);
+	}
+
+	/***** メニューオープン時 *****/
+	.btn-line.open {
+		/* 真ん中の線を透明に */
+		background-color: transparent;
+	}
+	.btn-line.open::before , .btn-line.open::after {
+		content: "";
+		background-color: #fff;
+		transition: .2s;
+	}
+	.btn-line.open::before {
+		/* 上の線を傾ける */
+		transform: rotate(45deg);
+	}
+	.btn-line.open::after {
+		/* 上の線を傾ける */
+		transform: rotate(-45deg);
+	}
+	
+	/**************** 以下、メニューのスタイリング ****************/
+	.menu {
+		/* メニューを縦に */
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		/* メニューの位置マイナス指定で画面外に */
+		right: -70%;
+		width: 70%;
+		height: calc( 100vh - 80px);
+		background-color: #000;
+		color: #fff;
+		transition: .3s;
+	}
+
+	.menu a {
+		color:#fff;
+	}
+	
+	/***** メニューオープン時位置0にして画面内に *****/
+	.menu.open {
+		position: absolute;
+		right: 0;
+		top: 80px;
+	}
+	
+  .menu-list {
+    /* メニューテキスト位置をリスト内中心に */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    /* padding-left: 16px; */
+  }
+  .menu-list:not(:first-child) {
+  margin-left: 0;
+  }
+	.menu-list:hover {
+		background-color: rgba(255, 255, 255, .7);
+		cursor: pointer;
+		transition: .3s;
+	}	
+}
 }

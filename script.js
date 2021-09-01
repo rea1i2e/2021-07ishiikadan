@@ -1,7 +1,12 @@
 // jQuery
 $(function () {
 
-  // scrollイベントを取得した際の処理を定義
+  // ハンバーガーメニュー
+  $('.js-btn').on('click', function () {        // js-btnクラスをクリックすると、
+    $('.menu , .btn-line').toggleClass('open'); // メニューとバーガーの線にopenクラスをつけ外しする
+  });
+
+  // スクロールすると現れるヘッダー
   $(window).on("scroll", function () {
     // scrollTop()が0より大きい場合
     if ($(this).scrollTop() > 0) {
