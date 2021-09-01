@@ -79,6 +79,11 @@ h2, h3 {
 /* -------------------------------------------
 header
 ------------------------------------------- */
+
+/* header {
+  display: none;
+} */
+
 .header-wrapper {
   /* background: #555; */
   width: 100%;
@@ -113,24 +118,16 @@ header
 }
 
 .title-nav {
-  /* background: brown; */
-  /* width: calc( 100% * 532 / 1880 ); */
-  /* width: 532px; */
-  /* h1とnavを横並びに */
   display: flex;
-  
-  /* h1とnavをY軸方向で中央ぞろえに */
   align-items: center;
 }
 
 header nav {
   /* background: brown; */
-  /* margin-left: 120px; */
   margin-left: calc( 100vw * 120 / 1920 );
 }
 
 header nav ul {
-  /* navの中身を横並びに */
   display: flex;
 }
 
@@ -285,6 +282,7 @@ first-view
 
 
 .copy {
+  /* display: none; */
   color: #fff;
   font-size: 2.125rem;
   font-weight: 800;
@@ -295,7 +293,8 @@ first-view
   position: absolute;
   z-index:10;
     top: 18.9vw;
-    left: 67.2vw;
+    /* left: 67.2vw; */
+    right: 32.8vw;
 }
 
 
@@ -907,10 +906,36 @@ footer address p {
 /*画面幅が767px以下の場合（スマホ）に適用するCSSを記入*/
 @media screen and (max-width: 767px) {
   /* 一時的に非表示 */
-  /* #about, #feature, #plan, #news, #access, footer {
-    display: none;
-  }  */
+  /* #about, #feature, #plan, #news, #access, footer { display: none; }  */
   /* 一時的に非表示終わり */
+  .header-wrapper {
+    padding: 13px 8px;
+  }
+  .title p {
+    font-size: 1.5rem;
+    letter-spacing: .18em;
+    margin-left: 4px;
+  }
+
+  h1 img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .reserve-btn {
+    padding: 0 16px;
+  }
+
+  .copy {
+    /* display: none; */
+    font-size: 2.125rem;
+    position: absolute;
+    z-index:10;
+      top: 46vw;
+      right: 18vw;
+  }
+  
+  
 
   .wrapper {
     width: 90%;
@@ -1043,7 +1068,7 @@ footer address p {
     /* padding-left: 16px; */
   }
   .menu-list:not(:first-child) {
-  margin-left: 0;
+    margin-left: 0;
   }
 	.menu-list:hover {
 		background-color: rgba(255, 255, 255, .7);
