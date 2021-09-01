@@ -905,9 +905,6 @@ footer address p {
 
 /*画面幅が767px以下の場合（スマホ）に適用するCSSを記入*/
 @media screen and (max-width: 767px) {
-  /* 一時的に非表示 */
-  /* #about, #feature, #plan, #news, #access, footer { display: none; }  */
-  /* 一時的に非表示終わり */
   .header-wrapper {
     padding: 13px 8px;
   }
@@ -1079,5 +1076,84 @@ footer address p {
   /* .second-header .menu {
     display: none;
   } */
+
+  /* ここから修正 */
+
+  #reserve-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 0 32px;
+    border: 1px solid #707070 ;
+    width: 80%;
+    height: 70%;
+    
+  }
+
+  /* モーダルを閉じるボタン */
+  #reserve-modal #close {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    cursor:pointer;
+  }
+
+  #reserve-modal h2 {
+    text-align: center;
+    border-bottom: 1px solid #E7E7E7;
+    font-size: 20px;
+    line-height: 1;
+    padding: 29px;
+    margin-bottom: 35.5px;
+  }
+
+  #reserve-modal input, #reserve-modal select {
+    border: 1px solid #E7E7E7;
+    /* border: 1px solid #000; */
+    width: 100%;
+    height: 32px;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+
+  #reserve-modal span {
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  #flatpickr {
+    margin-bottom: 64px;
+  }
+
+  #reserve-modal label {
+    display: block;
+    line-height: 1;
+    margin: 14px 0;
+  }
+
+  #reserve-modal button {
+    border: 1px solid #707070;
+  }
+
+  #select-plan {
+    color: #797878;
+  }
+
+  #reserve-modal button {
+    padding: 12px 65px;
+    line-height: 1;
+    display: block;
+    margin: 0 auto;
+  }
+
+    /* 一時的に非表示 */
+  #about, #feature, #plan, #news, #access, footer { display: none; } 
+  /* 一時的に非表示終わり */
+
+  /* ここまで修正 */
+
+
 }
 
