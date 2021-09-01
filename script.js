@@ -9,13 +9,15 @@ $(function () {
   // スクロールすると現れるヘッダー
   $(window).on("scroll", function () {
     // scrollTop()が0より大きい場合
-    if ($(this).scrollTop() > 0) {
+    if ($(this).scrollTop() > 80) {
       // ヘッダーバーをslideDownして表示
       $(".second-header").slideDown();
-    // scrollTop()が0の場合
+      $(".first-header").slideUp();
+      // scrollTop()が0の場合
     } else {
       // ヘッダーバーをslideUpして非表示
       $(".second-header").slideUp();
+      $(".first-header").slideDown();
     }
   });
 
