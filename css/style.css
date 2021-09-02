@@ -380,7 +380,6 @@ header nav li:not(:first-child) {
 #about-wrapper {
   padding: 64px 0 94px 0;
   width: 100vw;/* 画面幅に合わせる */
-  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
   writing-mode: vertical-rl;/* 縦書き指定 */
   text-orientation: upright; /* すべて縦方向に表示 */
   display: table-cell;
@@ -392,7 +391,6 @@ header nav li:not(:first-child) {
   font-size: 1.75rem;
   letter-spacing: .5em;
   line-height: calc( (28 + 33 ) / 28 );
-  margin-left: calc( 92.5em / 28 );
   margin-left: calc( 45em / 28 );
 }
 
@@ -415,7 +413,6 @@ header nav li:not(:first-child) {
   letter-spacing: .45em;
 }
 
-/* 下へ */
 
 /*-------------------------------------------
 #feature
@@ -1085,7 +1082,45 @@ footer address p {
     font-size: 12px;
   }
   
+  #about {
+    padding: 16px;
+    margin-bottom: 32px;
+  }
+
+  #about-wrapper {
+    padding: 1em 0;
+    writing-mode: horizontal-tb;
+  }
+
+  #about h2 {
+    letter-spacing: 0;
+    line-height: 1.7;
+    margin-left:0;
+    margin-bottom: 1em;
+  }
   
+  .indent {
+    display: none;
+  }
+
+  #about p {
+    line-height: 1.5;
+    letter-spacing: 0;
+    padding-top: 0;
+  }
+  
+  
+  #about p:not(:last-child) {
+    margin-bottom: 2em;
+    margin-left: 1em;
+  }
+
+  #about p:last-child {
+    text-align: right;
+    padding-top: 0;
+  }
+
+
 
   
   
