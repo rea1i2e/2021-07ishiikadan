@@ -3,7 +3,6 @@
 /* 共通のCSS */
 * {
   box-sizing: border-box;
-  /* outline:2px solid red; */
 }
 
 body {
@@ -74,130 +73,6 @@ h2, h3 {
 .img-bg {
   background:#ccc;
   height: fit-content;  /* 背景画像が画像からはみ出さないようにする */
-}
-
-/* -------------------------------------------
-header
-------------------------------------------- */
-
-/* header {
-  display: none;
-} */
-
-.header-wrapper {
-  /* background: #555; */
-  width: 100%;
-  max-width: 1920px;
-
-  height: 80px;
-  /* .reserve.btnの右上の余白を基準に設定 */
-  padding: 13px 20px;
-  
-  /* headerを手前中央に表示 */
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index:11;
-  
-  /* .title-navと.reserve-btnを横並びに */
-  display: flex;
-  
-  /* .title-navと.btnを両端ぞろえに */
-  justify-content: space-between;
-  
-  /* .title-navと.reserve-btnをY軸方向で中央ぞろえに */
-  align-items: center;
-}
-
-
-
-/* h1のロゴとテキストの間の余白 */
-.title p {
-  margin-left: 15px;
-}
-
-.title-nav {
-  display: flex;
-  align-items: center;
-}
-
-header nav {
-  /* background: brown; */
-  margin-left: calc( 100vw * 120 / 1920 );
-}
-
-header nav ul {
-  display: flex;
-}
-
-header nav li:not(:first-child) {
-  margin-left: 30px;
-}
-
-.first-header {
-  z-index: 11;
-}
-
-/* スクロールすると出現するヘッダー */
-.second-header {
-  /* opacity: .7; */
-  background: #fff;
-  width: 100%;
-  height: 80px;
-  color: #000;
-  /* ヘッダーバーを固定 */
-  position: fixed; 
-  /* 上から0の位置に固定 */
-  top: 0;
-   /* 左から0の位置に固定 */
-  left: 50%;
-  transform: translateX(-50%);
-   /* ヘッダーバーを非表示 */
-  display: none;
-  z-index: 12;
-}
-
-.first-header a {
-  color:#fff;
-}
-
-.second-header a {
-  color:#000;
-}
-
-.title {
-  display: flex;
-  align-items: center;
-}
-
-
-.reserve-btn {
-  display: flex;
-  background: #978F10;
-  /* padding: 16px 37px; */
-  padding: 0 37px;
-  cursor: pointer;
-}
-
-.reserve-btn:hover {
-  opacity: .7;
-}
-
-
-.reserve-btn img {
-  align-self: center;
-}
-
-.reserve-btn p {
-  color: #fff;
-  margin-left: 10px;
-  line-height: 54px;
-  font-weight: 800;
-}
-
-.btn {
-	display: none;
 }
 
 
@@ -280,23 +155,122 @@ first-view
   100% { opacity: 0 }
 }
 
+/* -------------------------------------------
+header
+------------------------------------------- */
 
-.copy {
-  /* display: none; */
-  color: #fff;
-  font-size: 2.125rem;
-  font-weight: 800;
-  letter-spacing: .23em;
-  line-height: 1.25;
-  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
-  writing-mode: vertical-rl;/* 縦書き指定 */
+.header-wrapper {
+  /* background: #555; */
+  width: 100%;
+  max-width: 1920px;
+
+  height: 80px;
+  /* .reserve.btnの右上の余白を基準に設定 */
+  padding: 13px 20px;
+  
+  /* headerを手前中央に表示 */
   position: absolute;
-  z-index:10;
-    top: 18.9vw;
-    /* left: 67.2vw; */
-    right: 32.8vw;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index:11;
+  
+  /* .title-navと.reserve-btnを横並びに */
+  display: flex;
+  
+  /* .title-navと.btnを両端ぞろえに */
+  justify-content: space-between;
+  
+  /* .title-navと.reserve-btnをY軸方向で中央ぞろえに */
+  align-items: center;
 }
 
+/* h1のロゴとテキストの間の余白 */
+.title p {
+  margin-left: 15px;
+}
+
+.title-nav {
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  /* background: brown; */
+  margin-left: calc( 100vw * 120 / 1920 );
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li:not(:first-child) {
+  margin-left: 30px;
+}
+
+.first-header {
+  z-index: 11;
+}
+
+/* スクロールすると出現するヘッダー */
+.second-header {
+  /* opacity: .7; */
+  background: #fff;
+  width: 100%;
+  height: 80px;
+  color: #000;
+  /* ヘッダーバーを固定 */
+  position: fixed; 
+  /* 上から0の位置に固定 */
+  top: 0;
+   /* 左から0の位置に固定 */
+  left: 50%;
+  transform: translateX(-50%);
+   /* ヘッダーバーを非表示 */
+  display: none;
+  z-index: 12;
+}
+
+.first-header a {
+  color:#fff;
+}
+
+.second-header a {
+  color:#000;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.reserve-btn {
+  display: flex;
+  background: #978F10;
+  /* padding: 16px 37px; */
+  padding: 0 37px;
+  cursor: pointer;
+}
+
+.reserve-btn:hover {
+  opacity: .7;
+}
+
+
+.reserve-btn img {
+  align-self: center;
+}
+
+.reserve-btn p {
+  color: #fff;
+  margin-left: 10px;
+  line-height: 54px;
+  font-weight: 800;
+}
+
+.btn {
+	display: none;
+}
 
 /*-------------------------------------------
 #modal
@@ -376,24 +350,36 @@ first-view
   margin: 0 auto;
 }
 
+.copy {
+  /* display: none; */
+  color: #fff;
+  font-size: 2.125rem;
+  font-weight: 800;
+  letter-spacing: .23em;
+  line-height: 1.25;
+  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
+  writing-mode: vertical-rl;/* 縦書き指定 */
+  position: absolute;
+  z-index:10;
+    top: 18.9vw;
+    right: 32.8vw;
+}
 
 /*-------------------------------------------
 #about
 -------------------------------------------*/
 #about {
-  /* max-width:1920px; bodyにあるから不要 */
-  margin: 0 auto 106px;
-  height: 681px;
-}
-
-#about-wrapper {
-  padding: 64px 0;
+  width: 100vw;
+  margin-bottom:  106px;
   background: rgb(224, 219, 219);
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+#about-wrapper {
+  padding: 64px 0 94px 0;
   width: 100vw;/* 画面幅に合わせる */
-  /* height: calc( 68100vw / 1920 );背景画像の縦横比に合わせる */
   -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
   writing-mode: vertical-rl;/* 縦書き指定 */
   text-orientation: upright; /* すべて縦方向に表示 */
@@ -406,7 +392,6 @@ first-view
   font-size: 1.75rem;
   letter-spacing: .5em;
   line-height: calc( (28 + 33 ) / 28 );
-  /* margin-left: 92.5px; */
   margin-left: calc( 92.5em / 28 );
   margin-left: calc( 45em / 28 );
 }
@@ -421,7 +406,6 @@ first-view
 /* デザインカンプでは、「石井花壇」の左側にも余白がある状態で中央揃えしているが、それだと少し右寄りになってしまうので、デザインとズレるが「石井花壇」の左側の余白は取り除いた */
 
 #about p:not(:last-child) {
-  /* margin-left: 92.5px; */
   margin-left: calc( 92.5em / 16 );
 }
 
@@ -430,6 +414,8 @@ first-view
   font-size: 1.375rem;
   letter-spacing: .45em;
 }
+
+/* 下へ */
 
 /*-------------------------------------------
 #feature
@@ -518,8 +504,8 @@ first-view
   background-size: cover;
   width: 100%;
   max-width:1920px;
+  padding-bottom: calc( 144px - .5em );
   margin: 0 auto;
-  height: 775px;
 }
 
 #plan h2 {
@@ -1101,12 +1087,19 @@ footer address p {
   
   
 
-    /* 一時的に非表示 */
-  #about, #feature, #plan, #news, #access, footer { display: none; } 
-  /* 一時的に非表示終わり */
-
-  /* ここまで修正 */
-
-
+  
+  
 }
+
+/* 作業用CSS */
+
+/* * { outline:2px solid red; } */
+/* .first-view { display: none; } */
+  /* header { display: none; } */
+  /* #about { display: none; }  */
+/* #feature { display: none; }  */
+/* #plan { display: none; }  */
+/* #news { display: none; }  */
+/* #access { display: none; }  */
+/* footer { display: none; }  */
 
