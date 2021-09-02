@@ -559,13 +559,13 @@ header nav li:not(:first-child) {
   display: flex;
   justify-content: center;
   /* デザインカンプでは、中央から10.5px右にずれた位置になっているが、意図不明のため中央に合わせた。 */
+  margin-bottom: 49px;
 }
 
 /* タブメニューに関するCSS */
 .tab li {
   cursor: pointer;
   margin-left: 53px;
-  margin-bottom: 49px;
   line-height: 1;
   font-weight: 500;
 }
@@ -1150,13 +1150,17 @@ footer address p {
     font-size: 1.5rem;
     margin-bottom: 1em;
   }
+  
+    #plan h2, #news h2, #access h2 {
+      margin-bottom: 32px;
+    }
 
   #feature p {
     margin-bottom: 1.5em;
   }
 
-  #plan h2 {
-    margin-bottom: 32px;
+  #plan {
+    padding-bottom: 64px;
   }
 
   .plan-wrapper {
@@ -1173,6 +1177,28 @@ footer address p {
     width: 100%;
     height: 25vh;
     max-height: 25vh;
+  }
+
+  #news {
+    padding-bottom: 64px;
+  }
+
+  #news .tab {
+    margin-bottom: 16px;
+  }
+
+  .news-item img {
+    width: 25vw;
+    height: 25vw;
+    object-fit: cover;
+  }
+
+  .news-desc {
+    margin-left: 16px;
+  }
+
+  .news-desc dd {
+    line-height: 1.5;
   }
   
 }
