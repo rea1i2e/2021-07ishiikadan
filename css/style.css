@@ -802,6 +802,7 @@ rooms.html
 .second-wrapper {
   /* background: gray; */
   padding-top: 36px;
+  padding-bottom: 150px;
 }
 
 .second-wrapper h2 {
@@ -831,8 +832,12 @@ rooms.html
 }
 
 .second-item {
-  width: 1180px;
+  width: calc( 100vw - 100px);
+  max-width: 1180px;
   display: flex;
+}
+
+.second-item:not(:last-child){
   margin-bottom: 141px;
 }
 
@@ -842,14 +847,19 @@ rooms.html
 
 .second-item-img-wrapper {
   /* background: yellow; */
-  width: 367px;
-  height: 381px;
+  width: calc( ( 100vw - 100px )  * 367 / 1180 );
+  max-width: 367px;
+  /* height: calc( ( 100vw - 100px )  * 381 / 1180 ); */
+  /* max-height: 381px; */
   position: relative;
 }
 
 .second-item img {
-  width: 525px;
-  height: 300px;
+  max-width: 525px;
+  max-height: 300px;
+  width: calc( ( 100vw - 100px )  * 525 / 1180 );
+  height: calc( ( 100vw - 100px )  * 300 / 1180 );
+
   object-fit:cover;
   position: absolute;
   top: -57px;
@@ -861,13 +871,17 @@ rooms.html
 
 .second-item-desc-wrapper {
   background-image: url(../img/bg.png);
-  width: 813px;
-  height: 381px;
+  width: calc( ( 100vw - 100px )  * 813 / 1180 );
+  max-width: 813px;
+  /* height: calc( ( 100vw - 100px )  * 381 / 1180 ); */
+  /* max-height: 381px; */
+  padding: 32px;
   padding-top: 60px;
 }
 
 .second-item:nth-child(odd) .second-item-desc-wrapper {
-  padding-left: 238px;
+  /* padding-left: 238px; */
+  padding-left: calc( 100% * 238 / 1180 );
 }
 
 .second-item:nth-child(even) .second-item-desc-wrapper {
@@ -1013,6 +1027,7 @@ rooms.html
   .header-wrapper {
     padding: 13px 8px;
   }
+
   .title p {
     font-size: 1.5rem;
     letter-spacing: .18em;
@@ -1089,7 +1104,8 @@ rooms.html
 		transition: .2s;
 	}
   
-  .second-header .btn-line {
+  /* .second-header .btn-line { */
+  .white-header .btn-line {
     background-color: #000;
   }
 
@@ -1102,7 +1118,8 @@ rooms.html
 		transition: .5s;
 	}
   
-  .second-header .btn-line::before , .second-header .btn-line::after {
+  /* .second-header .btn-line::before , .second-header .btn-line::after { */
+  .white-header .btn-line::before , .white-header .btn-line::after {
     background-color: #000;
   }
 
@@ -1125,7 +1142,8 @@ rooms.html
 		transition: .2s;
 	}
   
-  .second-header .btn-line.open::before , .second-header .btn-line.open::after {
+  /* .second-header .btn-line.open::before , .second-header .btn-line.open::after { */
+  .white-header .btn-line.open::before , .white-header .btn-line.open::after {
     background-color: #000;
   }
 
@@ -1359,6 +1377,80 @@ rooms.html
   .map-wrapper {
     width: 90vw;
     height: calc( 90vw * 592 / 792 );
+  }
+
+  .second-wrapper {
+    padding-bottom: 64px;
+  }
+  
+  .second-wrapper h2 {
+    margin-bottom: 32px;
+  }
+
+  .page-desc {
+    margin-bottom: 32px;
+  }
+
+  .second-item-wrapper {
+    /* background: lime; */
+    width: 100%;
+  }
+  .second-item {
+    width: 100%;
+    /* background: yellow; */
+    display: block;
+  }
+
+  .second-item:not(:last-child){
+    margin-bottom: 32px;
+  }
+  
+  .second-item-img-wrapper {
+    width: 80vw;
+    height: calc( 80vw * 300 / 525 );
+    padding: 32px;
+  }
+
+  .second-item:nth-child(odd) .second-item-desc-wrapper {
+    padding-left: 32px;
+  }
+  
+  .second-item:nth-child(even) .second-item-desc-wrapper {
+    padding-left: 32px;
+  }
+
+  .second-item img {
+    width: 80vw;
+    height: calc( 80vw * 300 / 525 );
+    top: 16px;
+    left: 0;
+  }
+
+  .second-item-desc-wrapper {
+    width: 95%;
+    padding: 32px;
+    margin-left: auto;
+    /* position: absolute;
+    right: 0; */
+  }
+
+  .second-item-desc-wrapper h3 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    margin-bottom: 1em;
+  }
+
+  .second-item-desc-wrapper p {
+    margin-bottom: 1em;
+  line-height: 2;
+  }
+
+  .second-item-desc-wrapper p:nth-child(3) {
+    /* background: yellow; */
+    font-size: 14px;
+    line-height: calc( 21 / 14 );
+    margin-bottom: 1em;
   }
   
 }
