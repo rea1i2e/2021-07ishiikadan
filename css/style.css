@@ -8,7 +8,7 @@
 body {
   /* background: #ccc; */
   /* border: 5px solid pink; */
-  font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
+  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
   font-size: 100%;
   font-weight: 500;
   width: 100%;
@@ -25,23 +25,17 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  opacity: .5;
+}
+
 img {
   vertical-align: bottom;
 }
 
-
-h1 {
-  /* background: brown; */
-  font-family: 'Toppan Bunkyu Midashi Mincho';
-  font-weight: 800;
-  font-size: 2rem;
-  letter-spacing: .18em;
-  /* letter-spacing: calc( 17em / 96 ); */
-}
-
-h2, h3 {
+/* h2, h3 {
   font-weight:500;
-}
+} */
 
 .wrapper {
   /* background: #ccc; */
@@ -195,9 +189,19 @@ header
   align-items: center;
 }
 
+.site-logo {
+  /* background: brown; */
+  font-family: 'Toppan Bunkyu Midashi Mincho';
+  font-weight: 800;
+  font-size: 2rem;
+  letter-spacing: .18em;
+  /* letter-spacing: calc( 17em / 96 ); */
+}
+
+
 header nav {
   /* background: brown; */
-  margin-left: calc( 100vw * 120 / 1920 );
+  margin-left: calc( 100vw * ( 114.24 / 1920 ));
 }
 
 header nav ul {
@@ -206,36 +210,37 @@ header nav ul {
 
 header nav li:not(:first-child) {
   margin-left: 30px;
+  /* デザイン上では、2つ目のliの左側にイレギュラーな余白があるが、それは反映しない */
 }
 
 .first-header {
   z-index: 11;
 }
 
-/* スクロールすると出現するヘッダー */
-.second-header {
-  /* opacity: .7; */
+.white-header {
   background: #fff;
   width: 100%;
   height: 80px;
   color: #000;
   /* ヘッダーバーを固定 */
   position: fixed; 
-  /* 上から0の位置に固定 */
   top: 0;
-   /* 左から0の位置に固定 */
   left: 50%;
   transform: translateX(-50%);
-   /* ヘッダーバーを非表示 */
-  display: none;
   z-index: 12;
+  /* opacity: .7; */
+}
+
+/* スクロールすると出現するヘッダー */
+.second-header {
+  display: none;
 }
 
 .first-header a {
   color:#fff;
 }
 
-.second-header a {
+.white-header a {
   color:#000;
 }
 
@@ -769,6 +774,126 @@ footer address p {
   font-weight: 500;
 
 }
+
+/* ********************************************************** 
+rooms.html
+********************************************************** */
+.fv-img {
+  background-image: url(../img/oheya-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: calc( 100vw * 500 / 1920 );
+  max-height: 500px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.fv-img h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 34px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.second-wrapper {
+  /* background: gray; */
+  padding-top: 36px;
+}
+
+.second-wrapper h2 {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 90px;
+  width: fit-content;
+  font-family: "游明朝体";
+  /* font-familyの指定がないと"<"のサイズがズレる */
+}
+
+.second-wrapper h2 a {
+  color: #000;
+}
+
+.second-wrapper h2 a:hover {
+  opacity: .5;
+}
+
+
+.page-desc {
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 127px;
+}
+
+.second-item {
+  width: 1180px;
+  display: flex;
+  margin-bottom: 141px;
+}
+
+.second-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.second-item-img-wrapper {
+  /* background: yellow; */
+  width: 367px;
+  height: 381px;
+  position: relative;
+}
+
+.second-item img {
+  width: 525px;
+  height: 300px;
+  object-fit:cover;
+  position: absolute;
+  top: -57px;
+}
+
+.second-item:nth-child(even) img {
+  right: 0;
+}
+
+.second-item-desc-wrapper {
+  background-image: url(../img/bg.png);
+  width: 813px;
+  height: 381px;
+  padding-top: 60px;
+}
+
+.second-item:nth-child(odd) .second-item-desc-wrapper {
+  padding-left: 238px;
+}
+
+.second-item:nth-child(even) .second-item-desc-wrapper {
+  padding-left: 60px;
+}
+
+.second-item-desc-wrapper h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  margin-bottom: 44px;
+}
+
+.second-item-desc-wrapper p {
+  margin-bottom: 40.5px;
+  line-height: 2;
+}
+
+.second-item-desc-wrapper p:nth-child(3) {
+  /* background: yellow; */
+  font-size: 14px;
+  line-height: calc( 21 / 14 );
+  padding-left: 6px;
+}
+
+
 
 /*画面幅が1024px以下の場合（タブレット）に適用するCSSを記入*/
 @media screen and (max-width: 1024px) {
