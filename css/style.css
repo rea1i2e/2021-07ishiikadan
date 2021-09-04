@@ -33,9 +33,9 @@ img {
   vertical-align: bottom;
 }
 
-/* h2, h3 {
+h2, h3 {
   font-weight:500;
-} */
+}
 
 .wrapper {
   /* background: #ccc; */
@@ -618,13 +618,13 @@ header nav li:not(:first-child) {
 }
 
 .news-desc {
-  margin-left: 30px;
+  margin: 0 20px 0 30px;
 }
 
 .news-desc dt {
   font-size: calc(1rem * 14 / 16);
   line-height: 1;
-  margin-bottom: calc( 10px- 8px );
+  margin-bottom: 2px;
 }
 
 .news-desc dd {
