@@ -898,6 +898,7 @@ rooms.html
 }
 
 .second-item:nth-child(even) .second-item-desc-wrapper {
+  padding-right: calc( 100% * 238 / 1180 );
   padding-left: 60px;
 }
 
@@ -920,6 +921,57 @@ rooms.html
   /* padding-left: 6px; デザイン上はoheya.htmlの1つ目のみパッディングあるが反映しない*/
 }
 
+/* ************************************ 
+onsen.html
+************************************ */
+
+#onsen-feature {
+  /* background: lime; */
+  width: calc( 100vw - 100px );
+  max-width: 1180px;
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+  margin: 156.5px auto 95.5px;
+  padding-top: 95.5px;
+  padding-bottom: 74px;
+}
+
+#onsen-feature h3 {
+  text-align: center;
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 51.5px;
+}
+
+.onsen-feature-wrapper {
+  width: 75%;
+  margin: 0 auto;
+  border-top: 1px solid #E7E7E7;
+}
+
+.onsen-feature-list {
+  /* background: yellow; */
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.onsen-feature-list dd,.onsen-feature-list dt {
+  width: 70%;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: calc( 22 / 15 );
+  padding: 14px 0;
+}
+
+.onsen-feature-list dt {
+  width: 25%;
+}
+
+.onsen-feature-list dd {
+  width: 75%;
+}
 
 
 /*画面幅が1024px以下の場合（タブレット）に適用するCSSを記入*/
@@ -1451,7 +1503,7 @@ rooms.html
   .second-item-desc-wrapper h3 {
     font-size: 24px;
     font-weight: 500;
-    line-height: 1;
+    line-height: 1.5;
     margin-bottom: 1em;
   }
 
@@ -1465,6 +1517,27 @@ rooms.html
     font-size: 14px;
     line-height: calc( 21 / 14 );
     margin-bottom: 1em;
+  }
+
+
+#onsen-feature {
+  margin: 64px auto 32px;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+#onsen-feature h3 {
+  margin-bottom: 32px;
+}
+
+
+
+  .onsen-feature-list {
+    display: block;
+  }
+
+  .onsen-feature-list dt, .onsen-feature-list dd {
+    width:  100%;
   }
   
 }
