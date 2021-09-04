@@ -770,6 +770,10 @@ footer address p {
   margin-bottom: 23px;
 }
 
+footer h2:hover {
+  opacity: .5;
+}
+
 .ls18 {
   letter-spacing: .18em;
 }
