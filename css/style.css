@@ -792,7 +792,6 @@ footer h2:hover {
 rooms.html
 ********************************************************** */
 .fv-img {
-  background-image: url(../img/oheya-header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -888,6 +887,7 @@ rooms.html
   max-width: 813px;
   /* height: calc( ( 100vw - 100px )  * 381 / 1180 ); */
   /* max-height: 381px; */
+  height: 381px;
   padding: 32px;
   padding-top: 60px;
 }
@@ -917,7 +917,7 @@ rooms.html
   /* background: yellow; */
   font-size: 14px;
   line-height: calc( 21 / 14 );
-  padding-left: 6px;
+  /* padding-left: 6px; デザイン上はoheya.htmlの1つ目のみパッディングあるが反映しない*/
 }
 
 
@@ -1445,6 +1445,7 @@ rooms.html
     margin-left: auto;
     /* position: absolute;
     right: 0; */
+    height: fit-content;
   }
 
   .second-item-desc-wrapper h3 {
