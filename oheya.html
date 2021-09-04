@@ -50,6 +50,29 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+<!-- パンくずの構造化マークアップ -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "トップ",
+        "item": "https://rea1i2e.github.io/2021-07ishiikadan/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "お部屋",
+        "item": "https://rea1i2e.github.io/2021-07ishiikadan/oheya.html"
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body>
   <header>
@@ -113,7 +136,7 @@
   </header>
 
   <main class="wrapper second-wrapper">
-    <h2><a href="index.html">トップ</a> > お部屋</h2>
+    <h2><a href="index.html">トップ</a> > お部屋</h2>  
     <p class="page-desc" data-aos="fade-up">創業より受け継がれてきた石井花壇の和の造り<br>
       温海の雄大な絶景を堪能していただけるように設計された客室<br>
       ゆるやかに流れ行く時間に身を委ねて</p>
