@@ -23,6 +23,7 @@ li {
 
 a {
   text-decoration: none;
+  color: #000;
 }
 
 a:hover {
@@ -575,6 +576,10 @@ header nav li:not(:first-child) {
   font-weight: 500;
 }
 
+.tab li:hover {
+  opacity: .5;
+}
+
 .tab li:first-child {
   margin-left: 0;
 }
@@ -763,6 +768,10 @@ footer address {
 footer address p {
   line-height: 1;
   margin-bottom: 23px;
+}
+
+.ls18 {
+  letter-spacing: .18em;
 }
 
 .copyright {
