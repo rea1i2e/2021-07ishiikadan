@@ -1503,6 +1503,11 @@ onsen.html
     height: fit-content;
   }
 
+  .second-item:nth-child(even) .second-item-desc-wrapper {
+    padding: 32px;
+  }
+  
+
   .second-item-desc-wrapper h3 {
     font-size: 24px;
     font-weight: 500;
