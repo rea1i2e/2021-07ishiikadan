@@ -1123,8 +1123,6 @@ onsen.html
       top: 46vw;
       right: 18vw;
   }
-  
-  
 
   .wrapper {
     width: 90%;
@@ -1261,29 +1259,27 @@ onsen.html
     justify-content: center;
     width: 100%;
     height: 100%;
-    /* padding-left: 16px; */
   }
+
   .menu-list:not(:first-child) {
     margin-left: 0;
   }
+
 	.menu-list:hover {
 		background-color: rgba(255, 255, 255, .7);
 		cursor: pointer;
 		transition: .3s;
 	}	
 
-  /* .second-header .menu {
-    display: none;
-  } */
-
-  /* ここから修正 */
+  .reserve-btn p {
+    line-height: 38px;
+  }
 
   #reserve-modal{
     padding: 0 32px;
     width: 375px;
     height: 600px;
   }
-  
   
   #reserve-modal span {
     font-size: 12px;
@@ -1557,6 +1553,7 @@ onsen.html
   .onsen-feature-list dt {
     text-align: center;
     padding-bottom: 0;
+  }
 }
 
 /* 作業用CSS */
@@ -1570,4 +1567,3 @@ onsen.html
 /* #news { display: none; }  */
 /* #access { display: none; }  */
 /* footer { display: none; }  */
-
