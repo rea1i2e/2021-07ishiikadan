@@ -46,7 +46,7 @@ $(function () {
     $(this).addClass('active-tab');
  
     // ⑤コンテンツを一旦非表示にし、クリックされた順番のコンテンツのみを表示
-    $('.area dl').removeClass('show').eq(index).addClass('show');
+    $('.area ul').removeClass('show').eq(index).addClass('show');
   });
 
 });

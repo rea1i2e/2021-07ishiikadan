@@ -598,7 +598,7 @@ header nav li:not(:first-child) {
   cursor: auto;
 }
 
-.area dl {
+.area ul {
   display: none;
 }
 
