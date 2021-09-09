@@ -128,7 +128,7 @@
       <div id="reserve-modal">
         <img src="img/close.png" alt="閉じるボタン" id="close" width="18" height="18">
         <h2>宿泊予約</h2>
-        <form class="reserve-form" action="">
+        <form class="reserve-form">
           <label for="name">お名前</label>
           <input id="name" type="text" placeholder=" 例：石井正悟">
       
@@ -136,7 +136,7 @@
           <input id="email" type="text" placeholder=" 例：Example@example.com">
       
           <label for="select-plan">ご希望プラン<span>（空いているプランのみ表示されます）</span></label>
-            <select name="" id="select-plan">
+            <select id="select-plan">
               <option hidden>プランを選択してください</option>
               <option value="">【期間限定】海辺の四季旬彩、贅沢美味懐石プラン</option>
               <option value="">平日に優雅に楽しむ、特別宿泊プラン</option>
@@ -249,7 +249,7 @@
           
           <div data-aos="fade-up" class="plan-item">
             <div class="img-bg plan-img-wrapper">
-              <img  data-aos="fade-up"src="img/recommended01.jpg" alt="焼き魚の写真">
+              <img  data-aos="fade-up" src="img/recommended01.jpg" alt="焼き魚の写真">
             </div>
             <h3 data-aos="fade-up">
               <span class="text-block">朝食付きプラン、</span>
@@ -262,7 +262,7 @@
           </div>
           
           <div data-aos="fade-up" class="plan-item">
-            <div class="img-bg plan-img-wrapper"><img  data-aos="fade-up"src="img/recommended02.jpg" alt="かに料理の写真"></div>
+            <div class="img-bg plan-img-wrapper"><img data-aos="fade-up" src="img/recommended02.jpg" alt="かに料理の写真"></div>
             <h3 data-aos="fade-up">
               <span class="text-block">【期間限定】</span>
               <span class="text-block">熱海蟹をたっぷりと</span>
@@ -274,7 +274,7 @@
           </div>
 
           <div data-aos="fade-up" class="plan-item">
-            <div class="img-bg plan-img-wrapper"><img  data-aos="fade-up"src="img/recommended03.jpg" alt="刺身盛り合わせの写真"></div>
+            <div class="img-bg plan-img-wrapper"><img data-aos="fade-up" src="img/recommended03.jpg" alt="刺身盛り合わせの写真"></div>
             <h3 data-aos="fade-up">
               <span class="text-block">【平日限定】</span>
               <span class="text-block">贅沢美味懐石プラン。</span>
@@ -290,98 +290,99 @@
     </section>
 
     <section id="news">
-      <div  class="wrapper">
-      <h2>
-        <img class="h2-logo" src="img/logo02.png" alt="石井花壇のロゴ画像" width="40" height="40">
-        <span>お知らせ</span>
-      </h2>
+      <div class="wrapper">
+        <h2>
+          <img class="h2-logo" src="img/logo02.png" alt="石井花壇のロゴ画像" width="40" height="40">
+          <span>お知らせ</span>
+        </h2>
       
-      <ul data-aos="fade-up" class="tab">
-        <li class="active-tab">営業情報</li>
-        <li>その他</li>
-      </ul>
+        <ul data-aos="fade-up" class="tab">
+          <li class="active-tab">営業情報</li>
+          <li>その他</li>
+        </ul>
     
-      <div data-aos="fade-up" data-aos="fade-up" class="area">
+        <div data-aos="fade-up" class="area">
 
-          <dl data-aos="fade-up" class="news-wrapper show">
-          
-            <div class="news-item">
-              <img src="img/news01.jpg" alt="年末のイメージ画像">
-              <div class="news-desc">
-                <dt>2020.12.24</dt>
-                <dd>年末最後の営業日は27日になります。</dd>
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news02.jpg" alt="年末料理の画像">
-              <div class="news-desc">
-                <dt>2020.12.24</dt>
-                <dd>年末最後の営業日のお知らせ</dd>
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news02.jpg" alt="年末料理の画像">
-              <div class="news-desc">
-                <dt>2020.12.11</dt>
-                <dd>12.21は臨時休業とさせていただきますので、よろしくお願いします。</dd>
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news01.jpg" alt="年末のイメージ画像">
-              <div class="news-desc">
-                <dt>2020.12.24</dt>
-                <dd>年末最後の営業日のお知らせ</dd>
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news01.jpg" alt="年末のイメージ画像">
-              <div class="news-desc">
-                <dt>2020.12.01</dt>
-                <dd>和室の改装を行いますため、12.10はお休みさせていただきます。</dd><!-- デザイン上不自然な改行があるが反映しなかった。 -->
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news02.jpg" alt="年末料理の画像">
-              <div class="news-desc">
-                <dt>2020.12.24</dt>
-                <dd>年末最後の営業日のお知らせ</dd>
-              </div>
-            </div>
-          </dl>
-          
-          <dl data-aos="fade-up" class="news-wrapper">
-          
-            <div class="news-item">
-              <img src="img/news02.jpg" alt="年末料理の画像">
-              <div class="news-desc">
-                <dt>2021.08.05</dt>
-                <dd>夕食のメニューが新しくなりました。</dd>
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news01.jpg" alt="年末のイメージ画像">
-              <div class="news-desc">
-                <dt>2021.08.05</dt>
-                <dd>夕食のメニューが新しくなりました。</dd>
-              </div>
-            </div>
-          
-            <div class="news-item">
-              <img src="img/news01.jpg" alt="年末のイメージ画像">
-              <div class="news-desc">
-                <dt>2021.08.05</dt>
-                <dd>夕食のメニューが新しくなりました。</dd>
-              </div>
-            </div>
-          
-      </ul>
-    </div><!-- /.wrapper -->
+            <ul data-aos="fade-up" class="news-wrapper show">
+            
+              <li class="news-item">
+                <img src="img/news01.jpg" alt="年末のイメージ画像">
+                <dl class="news-desc">
+                  <dt>2020.12.24</dt>
+                  <dd>年末最後の営業日は27日になります。</dd>
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news02.jpg" alt="年末料理の画像">
+                <dl class="news-desc">
+                  <dt>2020.12.24</dt>
+                  <dd>年末最後の営業日のお知らせ</dd>
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news02.jpg" alt="年末料理の画像">
+                <dl class="news-desc">
+                  <dt>2020.12.11</dt>
+                  <dd>12.21は臨時休業とさせていただきますので、よろしくお願いします。</dd>
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news01.jpg" alt="年末のイメージ画像">
+                <dl class="news-desc">
+                  <dt>2020.12.24</dt>
+                  <dd>年末最後の営業日のお知らせ</dd>
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news01.jpg" alt="年末のイメージ画像">
+                <dl class="news-desc">
+                  <dt>2020.12.01</dt>
+                  <dd>和室の改装を行いますため、12.10はお休みさせていただきます。</dd><!-- デザイン上不自然な改行があるが反映しなかった。 -->
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news02.jpg" alt="年末料理の画像">
+                <dl class="news-desc">
+                  <dt>2020.12.24</dt>
+                  <dd>年末最後の営業日のお知らせ</dd>
+                </dl>
+              </li>
+            </ul>
+            
+            <ul data-aos="fade-up" class="news-wrapper">
+            
+              <li class="news-item">
+                <img src="img/news02.jpg" alt="年末料理の画像">
+                <dl class="news-desc">
+                  <dt>2021.08.05</dt>
+                  <dd>夕食のメニューが新しくなりました。</dd>
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news01.jpg" alt="年末のイメージ画像">
+                <dl class="news-desc">
+                  <dt>2021.08.05</dt>
+                  <dd>夕食のメニューが新しくなりました。</dd>
+                </dl>
+              </li>
+            
+              <li class="news-item">
+                <img src="img/news01.jpg" alt="年末のイメージ画像">
+                <dl class="news-desc">
+                  <dt>2021.08.05</dt>
+                  <dd>夕食のメニューが新しくなりました。</dd>
+                </dl>
+              </li>
+            
+            </ul>
+        </div><!-- /.area -->   
+      </div><!-- /.wrapper -->
     </section>
     
     <section id="access">
@@ -425,8 +426,8 @@
     </ul>
       
       <h2><a href="#">
-        <img  class="h2-logo" src="img/logo02.png" alt="ロゴ画像">
-        <p>石井花壇</p>
+        <img class="h2-logo" src="img/logo02.png" alt="ロゴ画像" width="40" height="40">
+        <span>石井花壇</span>
       </a></h2>
       
       <address>
