@@ -372,8 +372,8 @@ header nav li:not(:first-child) {
   font-weight: 800;
   letter-spacing: .23em;
   line-height: 1.25;
-  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
-  writing-mode: vertical-rl;/* 縦書き指定 */
+  writing-mode: vertical-rl;
+  /* 縦書き指定 */
   position: absolute;
   z-index:10;
     top: 18.9vw;
@@ -759,14 +759,17 @@ footer li:last-child {
   margin-left: 0;
 }
 
-footer h2 p {
-  /* background: green; */
+footer h2 {
   font-size: 2rem;
   font-weight:800;
   letter-spacing: .18em;
   line-height: 1;
   margin-bottom: 72px;
   padding-left: .18em;
+}
+
+footer h2 span {
+  /* background: green; */
 }
 
 footer address {
@@ -1306,6 +1309,7 @@ onsen.html
 
   #about-wrapper {
     padding: 1em 0;
+    -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
     writing-mode: horizontal-tb;
   }
 
