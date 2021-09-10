@@ -19,7 +19,6 @@ li {
   list-style: none;
 }
 
-
 a {
   text-decoration: none;
   color: #000;
@@ -365,7 +364,7 @@ header nav li:not(:first-child) {
   position: absolute;
   z-index:10;
     top: 18.9vw;
-    right: 32.8vw;
+    right: 26.4vw;
 }
 
 /*-------------------------------------------
@@ -445,22 +444,21 @@ header nav li:not(:first-child) {
 }
 
 #feature .feature-desc {
-  /* background: #ccc; */
-  /* width: 30vw; */
   width: 870px;
   align-content: center;
   padding-top: calc( 32px - 13px );
 }
+/* 料理についてのテキストがデザインとずれている。ここだけ不規則のため、デザインを反映しない。 */
 
 #feature ul li:nth-child(odd) .feature-desc {
   /* background-color: brown; */
-  padding-right:100px;
+  /* padding-right:100px; */
   padding-left:137px;
 }
 
 #feature ul li:nth-child(even) .feature-desc {
   /* background-color: green; */
-  padding-left:100px;
+  padding-left:408px;
   padding-right:137px;
   
 }
