@@ -377,6 +377,8 @@ header nav li:not(:first-child) {
   background-image: url(../img/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  justify-content: center;
 }
 
 #about-wrapper {
@@ -387,8 +389,10 @@ header nav li:not(:first-child) {
   /* display: table-cell; */
   /* vertical-align: middle; */
   /* background: green; */
+  width: -moz-fit-content;
+  /* FireFox対応 */
   width: fit-content;
-  margin:0 auto;
+  /* margin:0 auto; */
 }
 
 #about h2 {
@@ -719,18 +723,22 @@ footer {
   width: 100%;
   max-width:1920px;
   margin: 0 auto;
-
-  /* height: 775px; */
   text-align: center;
   padding-top: 64px;
+}
+
+.footer-nav-wrapper {
+  /* background: orange; */
+  display: flex;
+  justify-content: center;
 }
 
 
 footer ul {
   /* background: pink; */
-  margin: 0 auto 82px;
+  margin-bottom: 82px;
+  /* margin: 0 auto 82px; */
   /* 余白96px - liのline-spacing14px = 82px */
-  -ms-writing-mode: tb-rl;/* 縦書き指定（IE） */
   writing-mode: vertical-rl;/* 縦書き指定 */
   text-align: left;
 }
@@ -755,9 +763,9 @@ footer h2 {
   padding-left: .18em;
 }
 
-footer h2 span {
-  /* background: green; */
-}
+/* footer h2 span {
+  background: green;
+} */
 
 footer address {
   font-style: normal;
