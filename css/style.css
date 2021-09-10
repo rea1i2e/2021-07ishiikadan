@@ -458,9 +458,10 @@ header nav li:not(:first-child) {
 
 #feature ul li:nth-child(even) .feature-desc {
   /* background-color: green; */
-  padding-left:408px;
+  /* padding-left:408px; */
+  padding-left:calc( 408px - (490px - 25vw ) );
   padding-right:137px;
-  
+  /* background: yellow; */
 }
 
 #feature h2 {
