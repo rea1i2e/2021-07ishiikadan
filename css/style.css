@@ -7,7 +7,7 @@
 
 body {
   /* border: 5px solid pink; */
-  font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+  font-family: "Times New Roman", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
   font-size: 100%;
   font-weight: 500;
   width: 100%;
@@ -895,7 +895,7 @@ rooms.html
 }
 
 .second-item:nth-child(even) .second-item-desc-wrapper {
-  padding-right: calc( 100% * 238 / 1180 );
+  padding-right: calc( 100% * 209 / 1180 );
   padding-left: 60px;
 }
 
