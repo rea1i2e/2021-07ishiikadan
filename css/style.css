@@ -228,7 +228,6 @@ header nav li:not(:first-child) {
   left: 50%;
   transform: translateX(-50%);
   z-index: 12;
-  /* opacity: .7; */
 }
 
 /* スクロールすると出現するヘッダー */
@@ -489,7 +488,8 @@ header nav li:not(:first-child) {
 }
 
 .feature-btn:hover {
-  opacity: .7;
+  background: #000;
+  color: #fff;
 }
 
 /*-------------------------------------------
@@ -571,7 +571,6 @@ header nav li:not(:first-child) {
   cursor: pointer;
   margin-left: 53px;
   line-height: 1;
-  font-weight: 500;
 }
 
 .tab li:hover {
@@ -607,10 +606,6 @@ header nav li:not(:first-child) {
   padding: 15px 10px;
   margin-bottom: 20px;
 }
-
-/* .news-item:not(:nth-last-child(-n+2)) {
-  margin-bottom: 20px;
-} */
 
 .news-item img {
   width: calc( ( 100vw - 100px ) * 103 / 1180 );
@@ -1010,13 +1005,7 @@ onsen.html
     width: 100%;
     padding-left:50px;
   }
-    
-  /* #feature h2 {
-    font-size: 2.25rem;
-    line-height: calc( 62 / 36 );
-    margin-bottom: calc( 75px - 13px - 8px );
-  } */
-  
+      
   #feature p {
     line-height: 2;
     margin-bottom: calc( 75px - 8px );
@@ -1097,7 +1086,7 @@ onsen.html
     padding: 13px 8px;
   }
 
-  .title p {
+  .title span {
     font-size: 1.5rem;
     letter-spacing: .18em;
     margin-left: 4px;
@@ -1125,7 +1114,7 @@ onsen.html
     width: 90%;
   }
 
-  .wrapper h2 p {
+  .wrapper h2 span {
     font-size: 2rem;
   }
 
