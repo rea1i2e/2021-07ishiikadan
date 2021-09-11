@@ -190,7 +190,8 @@ header
 
 .site-logo {
   /* background: brown; */
-  font-family: 'Toppan Bunkyu Midashi Mincho';
+  font-family: 'Toppan Bunkyu Midashi Mincho', "Times New Roman", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+
   font-weight: 800;
   font-size: 2rem;
   letter-spacing: .18em;
@@ -761,6 +762,7 @@ footer h2 {
   line-height: 1;
   margin-bottom: 72px;
   padding-left: .18em;
+  font-family: 'Toppan Bunkyu Midashi Mincho', "Times New Roman", "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
 }
 
 /* footer h2 span {
