@@ -208,6 +208,10 @@ header nav ul {
   display: flex;
 }
 
+nav li {
+  font-weight: 800;
+}
+
 header nav li:not(:first-child) {
   margin-left: 30px;
   /* デザイン上では、2つ目のliの左側にイレギュラーな余白があるが、それは反映しない */
