@@ -350,6 +350,10 @@ header nav li:not(:first-child) {
   color: #797878;
 }
 
+.size14 {
+  font-size: .875rem;
+}
+
 #reserve-modal button {
   padding: 12px 65px;
   line-height: 1;
@@ -802,7 +806,7 @@ footer h2:hover {
 }
 
 /* ********************************************************** 
-rooms.html
+下層ページ
 ********************************************************** */
 .fv-img {
   background-repeat: no-repeat;
