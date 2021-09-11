@@ -837,6 +837,10 @@ footer h2:hover {
   padding-bottom: 150px;
 }
 
+.third-wrapper {
+  padding-bottom: 0;
+}
+
 .second-wrapper h2 {
   text-align: left;
   font-size: 1rem;
