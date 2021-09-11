@@ -836,8 +836,6 @@ rooms.html
   font-weight: 500;
   margin-bottom: 90px;
   width: fit-content;
-  font-family: "游明朝体";
-  /* font-familyの指定がないと"<"のサイズがズレる */
 }
 
 .second-wrapper h2 a {
