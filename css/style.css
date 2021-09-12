@@ -11,7 +11,6 @@ body {
   font-size: 100%;
   font-weight: 500;
   width: 100%;
-  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -83,7 +82,7 @@ first-view
 
 .first-view {
   width: 100vw;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   height: 100vh;
   max-height: 1080px;
   overflow: hidden;/* imgがズームした時にはみ出た部分を隠す。 */
@@ -95,7 +94,7 @@ first-view
   z-index:10;
   opacity: 0;
   width: 100vw;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   height: 100vh;
   max-height: 1080px;
   background-position: center center;
@@ -436,6 +435,12 @@ header nav li:not(:first-child) {
 /*-------------------------------------------
 #feature
 -------------------------------------------*/
+.feature-wrapper {
+  width: 100vw;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
 #feature li {
   /* background-color: palegoldenrod; */
   display: flex;
@@ -476,7 +481,8 @@ header nav li:not(:first-child) {
 #feature ul li:nth-child(even) .feature-desc {
   /* background-color: green; */
   /* padding-left:408px; */
-  padding-left:calc( 408px - (490px - 25vw ) );
+  /* padding-left:calc( 408px - (490px - 25vw ) ); */
+  padding-left: 21%;
   padding-right:137px;
   /* background: yellow; */
 }
@@ -517,7 +523,7 @@ header nav li:not(:first-child) {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  max-width:1920px;
+  /* max-width:1920px; */
   padding-bottom: calc( 144px - .5em );
   margin: 0 auto;
 }
@@ -654,7 +660,7 @@ header nav li:not(:first-child) {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  max-width:1920px;
+  /* max-width:1920px; */
   margin: 0 auto;
 }
 
@@ -730,7 +736,7 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  max-width:1920px;
+  /* max-width:1920px; */
   margin: 0 auto;
   text-align: center;
   padding-top: 64px;
